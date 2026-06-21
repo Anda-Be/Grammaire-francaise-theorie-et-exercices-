@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Français C2 — Grammaire complète & Exercices</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#f8f6ff;color:#1a1630;line-height:1.7;font-size:15px}
+h1{background:linear-gradient(135deg,#3d3480,#7c6fcd,#2db9a0);color:#fff;padding:1.5rem;text-align:center;font-size:1.35rem}
+h1 small{display:block;font-size:.82rem;font-weight:400;opacity:.85;margin-top:.3rem}
+/* NAV */
+nav{background:#fff;border-bottom:2px solid #e0dcff;padding:.45rem .6rem;display:flex;flex-wrap:wrap;gap:4px;position:sticky;top:0;z-index:99;box-shadow:0 2px 6px rgba(60,40,140,.07)}
+nav button{font-family:Georgia,serif;font-size:.75rem;padding:4px 10px;border:1.5px solid #c4bcf0;border-radius:6px;background:#f8f6ff;color:#3d3480;cursor:pointer}
+nav button.on{background:#7c6fcd;color:#fff;border-color:#3d3480}
+/* SECTIONS */
+.sec{display:none;padding:1rem;max-width:800px;margin:0 auto}
+.sec.on{display:block}
+/* THEORY */
+.theory{background:#fff;border:2px solid #7c6fcd;border-radius:12px;padding:1.3rem 1.5rem;margin-bottom:1.3rem}
+.theory h2{font-size:1.05rem;color:#3d3480;margin-bottom:.9rem;padding-bottom:.5rem;border-bottom:1.5px solid #e0dcff;display:flex;align-items:center;gap:8px}
+.theory h3{font-size:.9rem;color:#3d3480;margin:.9rem 0 .4rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.theory p{font-size:.88rem;line-height:1.75;margin-bottom:.5rem;color:#1a1630}
+.theory em{color:#7c6fcd;font-style:italic}
+/* conjugation table */
+.ctbl{width:100%;border-collapse:collapse;font-size:.83rem;margin:.5rem 0 .9rem}
+.ctbl th{background:#f0eeff;color:#3d3480;font-weight:700;padding:5px 9px;text-align:left;border:1px solid #d0c8f0}
+.ctbl td{padding:4px 9px;border:1px solid #e8e4f8;vertical-align:top}
+.ctbl td:first-child{color:#888;font-style:italic;white-space:nowrap;width:90px}
+.ctbl td em{color:#3d3480;font-weight:700;font-style:normal}
+.ctbl .group{background:#fafaff}
+/* rule blocks */
+.rule{background:#f0eeff;border-left:4px solid #7c6fcd;border-radius:0 7px 7px 0;padding:8px 13px;margin:.5rem 0;font-size:.85rem;line-height:1.7}
+.rule strong{color:#3d3480}
+.warn{background:#fff3e0;border-left:4px solid #e8a020;border-radius:0 7px 7px 0;padding:8px 13px;margin:.5rem 0;font-size:.85rem;line-height:1.7}
+.warn strong{color:#7a4e00}
+.ok-rule{background:#e8f8f2;border-left:4px solid #2db9a0;border-radius:0 7px 7px 0;padding:8px 13px;margin:.5rem 0;font-size:.85rem;line-height:1.7}
+.ok-rule strong{color:#0e6e5a}
+.ex-inline{font-style:italic;color:#2a2040;margin:.25rem 0 .25rem 1rem;font-size:.85rem;display:block}
+.ex-inline b{color:#7c6fcd;font-style:normal}
+/* submenus */
+.subtabs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem}
+.stab{font-family:Georgia,serif;font-size:.78rem;padding:4px 11px;border:1.5px solid #c4bcf0;border-radius:20px;background:#f8f6ff;color:#3d3480;cursor:pointer}
+.stab.on{background:#e0dcff;border-color:#7c6fcd;font-weight:700}
+.stpane{display:none}.stpane.on{display:block}
+/* LITERARY */
+.lit{border-radius:10px;margin-bottom:1.2rem;overflow:hidden;border:1.5px solid #c4bcf0}
+.lit-head{padding:.65rem 1.1rem;display:flex;gap:10px;align-items:center}
+.lit-head b{font-size:.88rem}
+.lit-head small{font-size:.76rem;opacity:.88;display:block;margin-top:1px}
+.lit-body{padding:.9rem 1.1rem}
+.lit-quote{font-style:italic;font-size:.97rem;line-height:2.1;border-left:4px solid;padding-left:.9rem;margin-bottom:.6rem;color:#1a1030}
+.lit-note{font-size:.8rem;line-height:1.6;padding:.55rem .85rem;border-radius:6px}
+.ann{border-bottom:2px dotted;cursor:help;padding:1px 2px;border-radius:2px}
+.c-purple .lit-head{background:linear-gradient(90deg,#7c6fcd,#9b8fe0);color:#fff}
+.c-purple .lit-quote{border-color:#7c6fcd}
+.c-purple .lit-note{background:#f0eeff;color:#3d3480}
+.c-teal .lit-head{background:linear-gradient(90deg,#2db9a0,#44ccb3);color:#fff}
+.c-teal .lit-quote{border-color:#2db9a0}
+.c-teal .lit-note{background:#d9f5f0;color:#0e6e5a}
+.c-coral .lit-head{background:linear-gradient(90deg,#e8694a,#f08060);color:#fff}
+.c-coral .lit-quote{border-color:#e8694a}
+.c-coral .lit-note{background:#fdecea;color:#7a1a1a}
+.c-amber .lit-head{background:linear-gradient(90deg,#e8a020,#f4b840);color:#fff}
+.c-amber .lit-quote{border-color:#e8a020}
+.c-amber .lit-note{background:#fef3dc;color:#7a4e00}
+.c-blue .lit-head{background:linear-gradient(90deg,#3a86cc,#5098d8);color:#fff}
+.c-blue .lit-quote{border-color:#3a86cc}
+.c-blue .lit-note{background:#daeeff;color:#0d3d6e}
+.c-pink .lit-head{background:linear-gradient(90deg,#d45c8a,#e070a0);color:#fff}
+.c-pink .lit-quote{border-color:#d45c8a}
+.c-pink .lit-note{background:#f9e0ee;color:#6b1f3e}
+.c-green .lit-head{background:linear-gradient(90deg,#4a9e6e,#5cb87e);color:#fff}
+.c-green .lit-quote{border-color:#4a9e6e}
+.c-green .lit-note{background:#e8f8ee;color:#1a5c35}
+/* EXERCISES */
+.card{background:#fff;border:1.5px solid #e0dcff;border-radius:10px;padding:1.1rem;margin-bottom:1.1rem}
+.tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:20px;float:right;margin-left:8px}
+.tag.mcq{background:#ede9ff;color:#3d3480}
+.tag.fill{background:#d9f5f0;color:#0e6e5a}
+.tag.write{background:#fef3dc;color:#7a4e00}
+.qnum{font-size:.72rem;color:#aaa;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.qtxt{font-size:.95rem;font-weight:700;margin:.35rem 0 .7rem;color:#1a1630}
+.qsent{font-style:italic;font-size:1rem;margin-bottom:.8rem;color:#2a2040;line-height:2}
+.qsent b{color:#7c6fcd;font-style:normal}
+.qsent.norm{font-style:normal}
+.opts{display:flex;flex-direction:column;gap:5px}
+.opt{font-family:Georgia,serif;font-size:.9rem;text-align:left;padding:8px 13px;border:1.5px solid #ddd;border-radius:7px;background:#fafafa;cursor:pointer;transition:all .15s}
+.opt:hover:not(:disabled){border-color:#7c6fcd;background:#f0eeff}
+.opt.ok{border-color:#0f6e56!important;background:#d9f5f0!important;color:#0a4a38!important;font-weight:700}
+.opt.no{border-color:#c0392b!important;background:#fdecea!important;color:#7a1a1a!important}
+.opt.show{border-color:#0f6e56!important;background:#eafaf5!important;color:#0a4a38!important}
+input.blank{border:none;border-bottom:2px solid #7c6fcd;background:#f0eeff;border-radius:3px 3px 0 0;padding:2px 6px;font-family:Georgia,serif;font-size:.92rem;font-style:italic;color:#3d3480;outline:none}
+input.blank:focus{background:#e0d8ff}
+input.blank.ok{border-color:#0f6e56;background:#d9f5f0;color:#0a4a38}
+input.blank.no{border-color:#c0392b;background:#fdecea;color:#7a1a1a}
+textarea.ta{width:100%;border:1.5px solid #ddd;border-radius:7px;padding:8px;font-family:Georgia,serif;font-style:italic;font-size:.88rem;resize:vertical;min-height:60px;outline:none}
+textarea.ta:focus{border-color:#7c6fcd}
+.fb{display:none;margin-top:.6rem;padding:8px 12px;border-radius:7px;font-size:.84rem;line-height:1.65}
+.fb.ok{display:block;background:#d9f5f0;border-left:4px solid #0f6e56;color:#0a4a38}
+.fb.no{display:block;background:#fdecea;border-left:4px solid #c0392b;color:#7a1a1a}
+.btnrow{display:flex;gap:6px;margin-top:.7rem;flex-wrap:wrap;align-items:center}
+.bv{font-family:Georgia,serif;font-size:.82rem;padding:6px 15px;border:none;border-radius:6px;background:#7c6fcd;color:#fff;cursor:pointer;font-weight:700}
+.bv:hover{background:#3d3480}
+.bh{font-family:Georgia,serif;font-size:.82rem;padding:6px 13px;border:1.5px solid #e8a020;border-radius:6px;background:#fef3dc;color:#7a4e00;cursor:pointer}
+.bh:hover{background:#e8a020;color:#fff}
+.br{font-family:Georgia,serif;font-size:.82rem;padding:6px 13px;border:1.5px solid #7c6fcd;border-radius:6px;background:#f0eeff;color:#3d3480;cursor:pointer}
+.hint{display:none;margin-top:.45rem;padding:5px 10px;background:#fef3dc;border-radius:6px;font-size:.8rem;color:#7a4e00;font-style:italic}
+.hint.on{display:block}
+
+/* SECTION SUB-TABS */
+.sec-tabs{display:flex;gap:6px;margin-bottom:1.1rem;border-bottom:2px solid #e0dcff;padding-bottom:0}
+.sec-tab{font-family:Georgia,serif;font-size:.82rem;padding:7px 16px;border:none;border-bottom:3px solid transparent;background:transparent;color:#888;cursor:pointer;margin-bottom:-2px;font-weight:600;transition:all .15s}
+.sec-tab:hover{color:#7c6fcd}
+.sec-tab.on{color:#3d3480;border-bottom-color:#7c6fcd}
+.sec-pane{display:none}
+.sec-pane.on{display:block}
+
+/* progress */
+.pbar-wrap{background:#e0dcff;height:6px;border-radius:4px;margin:.5rem auto .2rem;max-width:800px;padding:0 1rem}
+.pbar-inner{background:#e0dcff;height:6px;border-radius:4px}
+.pbar{background:#7c6fcd;height:6px;border-radius:4px;transition:width .4s;width:0}
+.pinfo{font-size:.75rem;color:#aaa;text-align:center;margin-bottom:.3rem}
+/* score */
+.score-big{font-size:2.8rem;font-weight:900;color:#3d3480;text-align:center;margin:1rem 0 .3rem}
+.score-msg{text-align:center;font-size:.95rem;color:#0e6e5a;font-weight:700;margin-bottom:1.2rem}
+/* section header */
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid #e0dcff}
+.sec-head .ico{font-size:1.6rem}
+.sec-head h2{font-size:1.1rem;color:#3d3480;font-weight:700}
+.sec-head p{font-size:.8rem;color:#888;margin-top:2px}
+/* divider */
+.exhead{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#7c6fcd;margin:1.3rem 0 .7rem;padding-bottom:.3rem;border-bottom:1.5px dashed #e0dcff}
+</style>
+</head>
+<body>
+<h1>🇫🇷 Grammaire française — Théorie complète & Exercices C2
+<small>Conjugaisons · Règles · Exceptions · Textes littéraires · Exercices interactifs</small></h1>
+
+<nav id="NAV">
+<button class="on" onclick="go(0)">1 · Indicatif</button>
+<button onclick="go(1)">2 · Subjonctif</button>
+<button onclick="go(2)">3 · Conditionnel</button>
+<button onclick="go(3)">4 · Impératif</button>
+<button onclick="go(4)">5 · Modes non personnels</button>
+<button onclick="go(5)">6 · Concordance</button>
+<button onclick="go(6)">7 · Accord participe</button>
+<button onclick="go(7)">8 · Récits & styles</button>
+<button onclick="go(8)">9 · Pièges C2</button>
+<button onclick="go(9)">10 · Cloze littéraire</button>
+<button onclick="go(10)">📊 Score</button>
+</nav>
+
+<div class="pbar-wrap"><div class="pbar-inner"><div class="pbar" id="PB"></div></div></div>
+<p class="pinfo" id="PI">0 exercices complétés</p>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 1 — INDICATIF
+══════════════════════════════════════════════ -->
+<div class="sec on" id="S0">
+<div class="sec-head"><span class="ico">⏱</span><div><h2>L'indicatif</h2><p>8 temps · conjugaisons complètes · valeurs et emplois · exceptions</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S0',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S0',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S00" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Les temps de l'indicatif</h2>
+
+<div class="subtabs">
+  <button class="stab on" onclick="stab('ind',0,this)">Présent</button>
+  <button class="stab" onclick="stab('ind',1,this)">Imparfait</button>
+  <button class="stab" onclick="stab('ind',2,this)">Passé simple</button>
+  <button class="stab" onclick="stab('ind',3,this)">Passé composé</button>
+  <button class="stab" onclick="stab('ind',4,this)">Plus-que-parfait</button>
+  <button class="stab" onclick="stab('ind',5,this)">Futur simple</button>
+  <button class="stab" onclick="stab('ind',6,this)">Futur antérieur</button>
+  <button class="stab" onclick="stab('ind',7,this)">Passé antérieur</button>
+</div>
+
+<div id="ind0" class="stpane on">
+<h3>Présent de l'indicatif</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>-er (parler)</th><th>-ir (finir)</th><th>-re (prendre)</th><th>Irréguliers</th></tr>
+<tr class="group"><td>je/j'</td><td><em>parle</em></td><td><em>finis</em></td><td><em>prends</em></td><td>suis / ai / vais / fais / peux / veux / sais / dois</td></tr>
+<tr><td>tu</td><td><em>parles</em></td><td><em>finis</em></td><td><em>prends</em></td><td>es / as / vas / fais / peux / veux / sais / dois</td></tr>
+<tr class="group"><td>il/elle</td><td><em>parle</em></td><td><em>finit</em></td><td><em>prend</em></td><td>est / a / va / fait / peut / veut / sait / doit</td></tr>
+<tr><td>nous</td><td><em>parlons</em></td><td><em>finissons</em></td><td><em>prenons</em></td><td>sommes / avons / allons / faisons / pouvons</td></tr>
+<tr class="group"><td>vous</td><td><em>parlez</em></td><td><em>finissez</em></td><td><em>prenez</em></td><td>êtes / avez / allez / faites / pouvez</td></tr>
+<tr><td>ils/elles</td><td><em>parlent</em></td><td><em>finissent</em></td><td><em>prennent</em></td><td>sont / ont / vont / font / peuvent / veulent</td></tr></table>
+<div class="rule"><strong>Emplois :</strong> action en cours, vérité générale, habitude présente, futur proche avec marqueur temporel (<em>je pars demain</em>), présent de narration (récits historiques, biographies).</div>
+<div class="warn"><strong>Présent gnomique :</strong> vérités intemporelles et proverbes. <em>Qui va à la chasse perd sa place.</em></div>
+<span class="ex-inline">Il <b>est</b> à table. Elle <b>se lève</b> pour le servir. (Flaubert)</span>
+</div>
+
+<div id="ind1" class="stpane">
+<h3>Imparfait</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>-er (parler)</th><th>-ir (finir)</th><th>-re (prendre)</th><th>être / avoir</th></tr>
+<tr><td>je</td><td><em>parlais</em></td><td><em>finissais</em></td><td><em>prenais</em></td><td>étais / avais</td></tr>
+<tr class="group"><td>tu</td><td><em>parlais</em></td><td><em>finissais</em></td><td><em>prenais</em></td><td>étais / avais</td></tr>
+<tr><td>il/elle</td><td><em>parlait</em></td><td><em>finissait</em></td><td><em>prenait</em></td><td>était / avait</td></tr>
+<tr class="group"><td>nous</td><td><em>parlions</em></td><td><em>finissions</em></td><td><em>prenions</em></td><td>étions / avions</td></tr>
+<tr><td>vous</td><td><em>parliez</em></td><td><em>finissiez</em></td><td><em>preniez</em></td><td>étiez / aviez</td></tr>
+<tr class="group"><td>ils</td><td><em>parlaient</em></td><td><em>finissaient</em></td><td><em>prenaient</em></td><td>étaient / avaient</td></tr></table>
+<div class="rule"><strong>Formation :</strong> radical de la 1re pers. pl. du présent + <em>-ais/-ais/-ait/-ions/-iez/-aient</em>. Seule exception : <em>être → ét-</em>.</div>
+<div class="rule"><strong>Emplois :</strong> (1) arrière-plan narratif — décor, états continus ; (2) habitude révolue ; (3) imparfait de politesse ; (4) imparfait de rupture (avec <em>soudain, brusquement</em>) ; (5) hypothèse après <em>si</em>.</div>
+<div class="warn"><strong>Imparfait de rupture (C2) :</strong> paradoxalement, avec <em>et soudain</em>, l'imparfait crée un effet de ralenti cinématographique. <em>Et soudain il <b>tombait</b>.</em> (Maupassant)</div>
+<span class="ex-inline">Il <b>était</b> à table. Son bras <b>frôlait</b> le sien. (Flaubert — arrière-plan)</span>
+</div>
+
+<div id="ind2" class="stpane">
+<h3>Passé simple</h3>
+<table class="ctbl"><tr><th>Série</th><th>Terminaisons</th><th>Exemples</th></tr>
+<tr><td>Verbes en -er</td><td><em>-ai, -as, -a, -âmes, -âtes, -èrent</em></td><td>parlai, parlas, parla…</td></tr>
+<tr class="group"><td>Verbes en -ir/-re (série I)</td><td><em>-is, -is, -it, -îmes, -îtes, -irent</em></td><td>finis, pris, vins, mis, dis, vis…</td></tr>
+<tr><td>Série U (avoir, être…)</td><td><em>-us, -us, -ut, -ûmes, -ûtes, -urent</em></td><td>eus, fus, pus, sus, voulut, courut…</td></tr>
+<tr class="group"><td>Verbes en -enir</td><td><em>-ins, -ins, -int, -înmes, -întes, -inrent</em></td><td>vins, tins, devint…</td></tr></table>
+<div class="rule"><strong>Emploi :</strong> action passée délimitée dans le temps, récit littéraire. Remplacé par le passé composé à l'oral et dans la presse courante. Chaque passé simple = une action nouvelle qui fait avancer le récit.</div>
+<div class="warn"><strong>Registre :</strong> pratiquement inexistant à l'oral. À l'écrit : littérature, histoire, presse formelle. Mélanger passé simple et passé composé dans un même récit est une faute stylistique.</div>
+<span class="ex-inline">Elle se <b>leva</b>, il <b>sentit</b> la chaleur, il <b>vit</b> ses yeux et les <b>baissa</b>. (Flaubert)</span>
+</div>
+
+<div id="ind3" class="stpane">
+<h3>Passé composé</h3>
+<table class="ctbl"><tr><th>Auxiliaire</th><th>Verbes</th><th>Exemples</th></tr>
+<tr><td><em>avoir</em></td><td>Majorité des verbes</td><td>j'ai parlé, tu as fini, il a pris</td></tr>
+<tr class="group"><td><em>être</em></td><td>aller, venir, partir, arriver, naître, mourir, entrer, sortir, monter, descendre, rester, tomber, passer, retourner, devenir + tous les pronominaux</td><td>je suis allé(e), elle est venue, ils se sont levés</td></tr></table>
+<div class="rule"><strong>Accord avec avoir :</strong> le participe s'accorde avec le COD si et seulement si celui-ci est antéposé au verbe. <em>Les lettres qu'il a <b>écrites</b>. / Il les a <b>vues</b>.</em></div>
+<div class="warn"><strong>Monter, descendre, sortir, rentrer, passer, retourner :</strong> avec <em>avoir</em> quand ils ont un COD. <em>Il a <b>monté</b> les valises</em> ≠ <em>Il est <b>monté</b> au grenier.</em></div>
+<div class="warn"><strong>En partitif :</strong> ne déclenche pas l'accord. <em>Des pommes ? J'en ai <b>mangé</b>.</em></div>
+</div>
+
+<div id="ind4" class="stpane">
+<h3>Plus-que-parfait</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>avec avoir</th><th>avec être</th></tr>
+<tr><td>j'</td><td><em>avais parlé</em></td><td><em>étais venu(e)</em></td></tr>
+<tr class="group"><td>tu</td><td><em>avais parlé</em></td><td><em>étais venu(e)</em></td></tr>
+<tr><td>il/elle</td><td><em>avait parlé</em></td><td><em>était venu(e)</em></td></tr>
+<tr class="group"><td>nous</td><td><em>avions parlé</em></td><td><em>étions venu(e)s</em></td></tr>
+<tr><td>vous</td><td><em>aviez parlé</em></td><td><em>étiez venu(e)s</em></td></tr>
+<tr class="group"><td>ils/elles</td><td><em>avaient parlé</em></td><td><em>étaient venu(e)s</em></td></tr></table>
+<div class="rule"><strong>Emplois :</strong> (1) antériorité dans le passé — action accomplie avant une autre action passée ; (2) hypothèse irréelle dans le passé après <em>si</em> ; (3) discours indirect au passé (remplace le passé composé direct).</div>
+<span class="ex-inline">Quand je suis arrivé, il <b>avait déjà fini</b> de manger. | Si tu <b>avais prévenu</b>, j'aurais pu aider.</span>
+</div>
+
+<div id="ind5" class="stpane">
+<h3>Futur simple</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>parler</th><th>finir</th><th>Irréguliers courants</th></tr>
+<tr><td>je</td><td><em>parlerai</em></td><td><em>finirai</em></td><td>serai / aurai / irai / ferai / viendrai / verrai / pourrai / voudrai / saurai / devrai / enverrai</td></tr>
+<tr class="group"><td>tu</td><td><em>parleras</em></td><td><em>finiras</em></td><td>seras / auras / iras…</td></tr>
+<tr><td>il/elle</td><td><em>parlera</em></td><td><em>finira</em></td><td>sera / aura / ira / fera / viendra…</td></tr>
+<tr class="group"><td>nous</td><td><em>parlerons</em></td><td><em>finirons</em></td><td>serons / aurons / irons…</td></tr>
+<tr><td>vous</td><td><em>parlerez</em></td><td><em>finirez</em></td><td>serez / aurez / irez…</td></tr>
+<tr class="group"><td>ils</td><td><em>parleront</em></td><td><em>finiront</em></td><td>seront / auront / iront / feront…</td></tr></table>
+<div class="rule"><strong>Formation :</strong> infinitif (les -re perdent le e final) + terminaisons de l'imparfait d'avoir. <em>Prendre → prendr- → prendrai.</em></div>
+<div class="rule"><strong>Valeurs :</strong> (1) prédiction, engagement, promesse ; (2) ordre solennel (<em>Tu ne fumeras pas ici</em>) ; (3) supposition sur le présent (<em>Il sera en réunion</em>) ; (4) futur historique.</div>
+</div>
+
+<div id="ind6" class="stpane">
+<h3>Futur antérieur</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>avec avoir</th><th>avec être</th></tr>
+<tr><td>j'</td><td><em>aurai parlé</em></td><td><em>serai venu(e)</em></td></tr>
+<tr><td>il/elle</td><td><em>aura parlé</em></td><td><em>sera venu(e)</em></td></tr>
+<tr><td>ils/elles</td><td><em>auront parlé</em></td><td><em>seront venu(e)s</em></td></tr></table>
+<div class="rule"><strong>Emplois :</strong> (1) antériorité dans le futur — obligatoire après <em>quand, lorsque, dès que, aussitôt que, une fois que</em> ; (2) hypothèse rétrospective sur le passé récent.</div>
+<span class="ex-inline">Dès qu'elle <b>aura fini</b>, elle vous appellera. | Il n'est pas là — il <b>aura raté</b> son train.</span>
+</div>
+
+<div id="ind7" class="stpane">
+<h3>Passé antérieur</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>avec avoir</th><th>avec être</th></tr>
+<tr><td>j'</td><td><em>eus parlé</em></td><td><em>fus venu(e)</em></td></tr>
+<tr><td>il/elle</td><td><em>eut parlé</em></td><td><em>fut venu(e)</em></td></tr>
+<tr><td>nous</td><td><em>eûmes parlé</em></td><td><em>fûmes venu(e)s</em></td></tr>
+<tr><td>ils</td><td><em>eurent parlé</em></td><td><em>furent venu(e)s</em></td></tr></table>
+<div class="rule"><strong>Emploi exclusivement littéraire :</strong> antériorité immédiate dans une subordonnée temporelle après passé simple. Toujours en corrélation avec un passé simple dans la principale. Conjonctions : <em>dès que, aussitôt que, quand, lorsque, à peine… que, ne… pas plus tôt que</em>.</div>
+<div class="warn"><strong>À peine… que</strong> entraîne l'inversion du sujet : <em>À peine <b>eut-il prononcé</b> ces mots qu'un silence tomba.</em></div>
+</div>
+</div><!-- /theory -->
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+</div>
+<div id="st_S01" class="sec-pane">
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-purple">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Flaubert — <em>Madame Bovary</em> (1857)</b><small>Imparfait d'arrière-plan vs passé simple d'action</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#7c6fcd">Il <span class="ann" style="background:#e8e0ff" title="imparfait — état, arrière-plan">était</span> à table en train de manger. Elle se <span class="ann" style="background:#c8f5e8" title="passé simple — action ponctuelle">leva</span> pour les servir, et comme son bras <span class="ann" style="background:#e8e0ff" title="imparfait — état continu">frôlait</span> le sien, il <span class="ann" style="background:#c8f5e8" title="passé simple — action">sentit</span> la chaleur de son corps. Charles, en soulevant les yeux, <span class="ann" style="background:#c8f5e8" title="passé simple — action">vit</span> ses yeux bleus fixés sur lui et les <span class="ann" style="background:#c8f5e8" title="passé simple — action">baissa</span> vivement.</div>
+    <div class="lit-note">🟣 <b>Imparfait</b> (violet) = décor, états duratifs &nbsp;|&nbsp; 🟢 <b>Passé simple</b> (vert) = actions qui font avancer le récit. Survolez les mots colorés.</div>
+  </div>
+</div>
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-purple">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Flaubert — <em>Madame Bovary</em> (1857)</b><small>Imparfait d'arrière-plan vs passé simple d'action</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#7c6fcd">Il <span class="ann" style="background:#e8e0ff" title="imparfait — état, arrière-plan">était</span> à table en train de manger. Elle se <span class="ann" style="background:#c8f5e8" title="passé simple — action ponctuelle">leva</span> pour les servir, et comme son bras <span class="ann" style="background:#e8e0ff" title="imparfait — état continu">frôlait</span> le sien, il <span class="ann" style="background:#c8f5e8" title="passé simple — action">sentit</span> la chaleur de son corps. Charles, en soulevant les yeux, <span class="ann" style="background:#c8f5e8" title="passé simple — action">vit</span> ses yeux bleus fixés sur lui et les <span class="ann" style="background:#c8f5e8" title="passé simple — action">baissa</span> vivement.</div>
+    <div class="lit-note">🟣 Imparfait = décor, états duratifs | 🟢 Passé simple = actions qui font avancer le récit. Survolez les mots colorés.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">1.1</span>
+  <p class="qtxt">Valeur du présent dans cet extrait historique :</p>
+  <p class="qsent">En 1789, le peuple <b>se lève</b>, <b>prend</b> la Bastille et <b>change</b> le cours de l'histoire.</p>
+  <div class="opts" id="Q16">
+    <button class="opt" onclick="mcq('Q16',this,false)">Présent d'énonciation</button>
+    <button class="opt" onclick="mcq('Q16',this,true)">Présent de narration</button>
+    <button class="opt" onclick="mcq('Q16',this,false)">Présent gnomique</button>
+    <button class="opt" onclick="mcq('Q16',this,false)">Présent itératif</button>
+  </div>
+  <div class="hint" id="HQ16">Le présent de narration dans un récit passé crée une proximité dramatique — comme si on assistait à la scène.</div>
+  <div class="fb" id="FQ16"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ16')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">1.2</span>
+  <p class="qtxt">Passé simple ou imparfait — décor vs action :</p>
+  <p class="qsent">La nuit <input class="blank" id="B1a" placeholder="(être)" style="width:80px"> calme. Soudain une lumière <input class="blank" id="B1b" placeholder="(traverser)" style="width:110px"> le ciel.</p>
+  <div class="hint" id="HB1">Décor statique → imparfait. Action soudaine, ponctuelle → passé simple.</div>
+  <div class="fb" id="FB1"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB1',[['B1a',['était']],['B1b',['traversa']]],'Parfait ! Imparfait pour le décor, passé simple pour l'action.','Attendu : <b>était</b> (imparfait) / <b>traversa</b> (passé simple).')">Vérifier</button>
+    <button class="bh" onclick="hint('HB1')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">1.3</span>
+  <p class="qtxt">Valeur de l'imparfait :</p>
+  <p class="qsent">Je <b>voulais</b> justement vous soumettre une idée, si vous avez un instant.</p>
+  <div class="opts" id="Q3">
+    <button class="opt" onclick="mcq('Q3',this,false)">Habitude dans le passé</button>
+    <button class="opt" onclick="mcq('Q3',this,false)">Arrière-plan narratif</button>
+    <button class="opt" onclick="mcq('Q3',this,true)">Imparfait de politesse</button>
+    <button class="opt" onclick="mcq('Q3',this,false)">Hypothétique</button>
+  </div>
+  <div class="hint" id="HQ3">L'action est présente mais l'imparfait crée une distance temporelle qui adoucit la demande.</div>
+  <div class="fb" id="FQ3"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ3')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">1.4</span>
+  <p class="qtxt">Imparfait de rupture — identifiez l'effet :</p>
+  <p class="qsent">Tout allait bien — et soudain, le marié <b>tombait</b> dans les pommes.</p>
+  <div class="opts" id="Q19">
+    <button class="opt" onclick="mcq('Q19',this,false)">Imparfait d'arrière-plan descriptif</button>
+    <button class="opt" onclick="mcq('Q19',this,true)">Imparfait de rupture — ralenti et soudaineté</button>
+    <button class="opt" onclick="mcq('Q19',this,false)">Imparfait de politesse</button>
+  </div>
+  <div class="hint" id="HQ19">Avec <em>et soudain</em>, l'imparfait crée paradoxalement un effet de ralenti — non de continuité.</div>
+  <div class="fb" id="FQ19"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ19')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">1.5</span>
+  <p class="qtxt">Passé composé vs passé simple — registre courant (presse) :</p>
+  <p class="qsent">En 2015, les attentats <input class="blank" id="B17a" placeholder="(marquer)" style="width:100px"> profondément la France. Depuis, le pays <input class="blank" id="B17b" placeholder="(changer)" style="width:90px">.</p>
+  <div class="hint" id="HB17">Presse moderne = passé composé (non passé simple). <em>Depuis</em> + passé composé si action révolue.</div>
+  <div class="fb" id="FB17"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB17',[['B17a',['ont marqué']],['B17b',['a changé']]],'Correct ! Registre courant (presse) → passé composé.','Attendu : <b>ont marqué</b> / <b>a changé</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB17')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">1.6</span>
+  <p class="qtxt">Plus-que-parfait — antériorité dans le passé :</p>
+  <p class="qsent">Quand nous sommes arrivés, elle <input class="blank" id="B18" placeholder="(partir) déjà" style="width:140px"> déjà.</p>
+  <div class="hint" id="HB18">PQP = auxiliaire à l'imparfait + participe passé. L'action s'est produite avant l'arrivée.</div>
+  <div class="fb" id="FB18"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB18','B18',['était déjà partie','était partie'],'Correct ! PQP : elle est partie avant notre arrivée.','Attendu : <b>était déjà partie</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB18')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">1.7</span>
+  <p class="qtxt">Futur antérieur — antériorité obligatoire :</p>
+  <p class="qsent">Dès qu'elle <input class="blank" id="B4" placeholder="(finir)" style="width:100px"> ce dossier, elle vous appellera.</p>
+  <div class="hint" id="HB4"><em>Dès que</em> + futur antérieur = antériorité dans le futur. Auxiliaire au futur + participe passé.</div>
+  <div class="fb" id="FB4"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB4','B4',['aura fini'],'Bravo ! Futur antérieur obligatoire après <em>dès que</em>.','Attendu : <b>aura fini</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB4')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">1.8</span>
+  <p class="qtxt">Futur simple — ordre solennel :</p>
+  <p class="qsent">Tu ne <input class="blank" id="B110" placeholder="(fumer)" style="width:100px"> pas dans cette maison.</p>
+  <div class="hint" id="HB110">Le futur simple peut exprimer un ordre absolu, plus péremptoire que l'impératif dans certains contextes.</div>
+  <div class="fb" id="FB110"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB110','B110',['fumeras'],'Correct ! Futur d'ordre — solennel et catégorique.','Attendu : <b>fumeras</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB110')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">1.9</span>
+  <p class="qtxt">Valeur du futur simple :</p>
+  <p class="qsent">— Il ne répond pas. — Il <b>sera</b> en réunion.</p>
+  <div class="opts" id="Q1">
+    <button class="opt" onclick="mcq('Q1',this,false)">Futur certain</button>
+    <button class="opt" onclick="mcq('Q1',this,true)">Supposition sur le présent</button>
+    <button class="opt" onclick="mcq('Q1',this,false)">Ordre atténué</button>
+    <button class="opt" onclick="mcq('Q1',this,false)">Futur historique</button>
+  </div>
+  <div class="hint" id="HQ1">Le futur simple peut exprimer une déduction logique sur le présent — valeur modale.</div>
+  <div class="fb" id="FQ1"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ1')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">1.10</span>
+  <p class="qtxt">Passé antérieur — style littéraire :</p>
+  <p class="qsent">À peine <input class="blank" id="B5" placeholder="(prononcer — il)" style="width:160px"> ces mots qu'un silence tomba.</p>
+  <div class="hint" id="HB5">Passé antérieur + inversion du sujet : <em>À peine eut-il prononcé…</em></div>
+  <div class="fb" id="FB5"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB5','B5',['eut-il prononcé','eut il prononcé'],'Excellent ! Passé antérieur + inversion après <em>à peine</em>.','Attendu : <b>eut-il prononcé</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB5')">💡 Indice</button>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 2 — SUBJONCTIF
+══════════════════════════════════════════════ -->
+<div class="sec" id="S1">
+<div class="sec-head"><span class="ico">🌀</span><div><h2>Le subjonctif</h2><p>4 temps · déclencheurs complets · indicatif vs subjonctif</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S1',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S1',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S10" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Le subjonctif</h2>
+<div class="subtabs">
+  <button class="stab on" onclick="stab('subj',0,this)">Présent</button>
+  <button class="stab" onclick="stab('subj',1,this)">Passé</button>
+  <button class="stab" onclick="stab('subj',2,this)">Imparfait (litt.)</button>
+  <button class="stab" onclick="stab('subj',3,this)">Plus-q.-parfait (litt.)</button>
+  <button class="stab" onclick="stab('subj',4,this)">Déclencheurs</button>
+</div>
+
+<div id="subj0" class="stpane on">
+<h3>Subjonctif présent</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>parler</th><th>finir</th><th>prendre</th><th>être / avoir / aller / faire</th></tr>
+<tr><td>que je</td><td><em>parle</em></td><td><em>finisse</em></td><td><em>prenne</em></td><td>sois / aie / aille / fasse</td></tr>
+<tr class="group"><td>que tu</td><td><em>parles</em></td><td><em>finisses</em></td><td><em>prennes</em></td><td>sois / aies / ailles / fasses</td></tr>
+<tr><td>qu'il</td><td><em>parle</em></td><td><em>finisse</em></td><td><em>prenne</em></td><td>soit / ait / aille / fasse</td></tr>
+<tr class="group"><td>que nous</td><td><em>parlions</em></td><td><em>finissions</em></td><td><em>prenions</em></td><td>soyons / ayons / allions / fassions</td></tr>
+<tr><td>que vous</td><td><em>parliez</em></td><td><em>finissiez</em></td><td><em>preniez</em></td><td>soyez / ayez / alliez / fassiez</td></tr>
+<tr class="group"><td>qu'ils</td><td><em>parlent</em></td><td><em>finissent</em></td><td><em>prennent</em></td><td>soient / aient / aillent / fassent</td></tr></table>
+<div class="rule"><strong>Formation :</strong> radical de la 3e pers. pl. du présent indicatif + <em>-e/-es/-e/-ions/-iez/-ent</em>. Pour <em>nous</em> et <em>vous</em>, reprise de la forme de l'imparfait indicatif.</div>
+<div class="warn"><strong>Exception capitale : <em>espérer que</em> → indicatif</strong> (jamais subjonctif). <em>J'espère qu'il <b>viendra</b></em> — non : *<em>vienne</em>. Mais <em>souhaiter que</em> → subjonctif.</div>
+</div>
+
+<div id="subj1" class="stpane">
+<h3>Subjonctif passé</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>avec avoir</th><th>avec être</th></tr>
+<tr><td>que j'</td><td><em>aie parlé</em></td><td><em>sois venu(e)</em></td></tr>
+<tr><td>que tu</td><td><em>aies parlé</em></td><td><em>sois venu(e)</em></td></tr>
+<tr><td>qu'il/elle</td><td><em>ait parlé</em></td><td><em>soit venu(e)</em></td></tr>
+<tr class="group"><td>que nous</td><td><em>ayons parlé</em></td><td><em>soyons venu(e)s</em></td></tr></table>
+<div class="rule"><strong>Emploi :</strong> action subjonctive antérieure au verbe principal. <em>Je regrette qu'il <b>soit parti</b></em> (départ antérieur au regret) ≠ <em>Je regrette qu'il <b>parte</b></em> (simultané ou à venir).</div>
+</div>
+
+<div id="subj2" class="stpane">
+<h3>Subjonctif imparfait — registre littéraire</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>parler</th><th>finir</th><th>venir</th><th>être / avoir</th></tr>
+<tr><td>que je</td><td><em>parlasse</em></td><td><em>finisse</em></td><td><em>vinsse</em></td><td>fusse / eusse</td></tr>
+<tr class="group"><td>qu'il/elle</td><td><em>parlât</em></td><td><em>finît</em></td><td><em>vînt</em></td><td>fût / eût</td></tr>
+<tr><td>que nous</td><td><em>parlassions</em></td><td><em>finissions</em></td><td><em>vinssions</em></td><td>fussions / eussions</td></tr>
+<tr class="group"><td>qu'ils</td><td><em>parlassent</em></td><td><em>finissent</em></td><td><em>vinssent</em></td><td>fussent / eussent</td></tr></table>
+<div class="rule"><strong>Concordance classique :</strong> verbe principal au passé → subjonctif imparfait dans la subordonnée (au lieu du présent moderne). Reconnaissable à l'accent circonflexe à la 3e sg : <em>parlât, finît, vînt, fût, eût</em>.</div>
+<span class="ex-inline">Il fallait qu'il <b>choisît</b>. Il tremblait qu'il lui <b>fallût</b> choisir. (Hugo)</span>
+</div>
+
+<div id="subj3" class="stpane">
+<h3>Subjonctif plus-que-parfait — registre littéraire</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>avec avoir</th><th>avec être</th></tr>
+<tr><td>que j'</td><td><em>eusse parlé</em></td><td><em>fusse venu(e)</em></td></tr>
+<tr><td>qu'il/elle</td><td><em>eût parlé</em></td><td><em>fût venu(e)</em></td></tr>
+<tr><td>que nous</td><td><em>eussions parlé</em></td><td><em>fussions venu(e)s</em></td></tr></table>
+<div class="rule"><strong>Valeur conditionnelle (C2) :</strong> à la 3e pers. sg, peut remplacer le conditionnel passé dans une hypothèse sans <em>si</em>. <em>Il <b>eût mieux valu</b> se taire</em> = <em>Il aurait mieux valu…</em></div>
+<div class="rule"><strong>Inversion sans si :</strong> <em><b>Eût-elle</b> accepté, tout aurait été différent</em> = <em>Si elle avait accepté…</em></div>
+</div>
+
+<div id="subj4" class="stpane">
+<h3>Déclencheurs du subjonctif — liste raisonnée</h3>
+<div class="ok-rule"><strong>Volonté, souhait, ordre :</strong> vouloir que, souhaiter que, désirer que, exiger que, demander que, ordonner que, permettre que, défendre que, empêcher que, s'opposer à ce que, tenir à ce que, préférer que, aimer mieux que</div>
+<div class="ok-rule"><strong>Sentiment :</strong> regretter que, être heureux/triste/surpris/fier/honteux que, craindre que (+ ne explétif), avoir peur que, s'étonner que, se réjouir que</div>
+<div class="ok-rule"><strong>Doute, négation de certitude :</strong> douter que, nier que, ne pas croire que, ne pas penser que, ne pas être sûr/certain que, il n'est pas évident que</div>
+<div class="ok-rule"><strong>Nécessité (impersonnel) :</strong> il faut que, il est nécessaire/essentiel/important/urgent/souhaitable que, il vaut mieux que, il est possible/impossible/peu probable que, il est dommage/étonnant que, il semble que (≠ il me semble que → indicatif)</div>
+<div class="ok-rule"><strong>Conjonctions (toujours subjonctif) :</strong> bien que, quoique, encore que, à moins que, pour que, afin que, avant que, jusqu'à ce que, pourvu que, à condition que, de peur que, sans que, non que, quelque… que, quel que, où que, qui que, quoi que</div>
+<div class="warn"><strong>Après que → indicatif</strong> (normatif). <em>Après qu'il <b>est parti</b>…</em> L'usage contemporain emploie souvent le subjonctif par analogie avec <em>avant que</em>, mais c'est considéré fautif en registre surveillé.</div>
+<div class="warn"><strong>Ne explétif :</strong> après <em>avant que, à moins que, de peur que, craindre que</em> et les comparatifs d'inégalité (<em>plus que, moins que</em>), un <em>ne</em> stylistique sans valeur négative peut s'ajouter. <em>Partez avant qu'il <b>ne</b> soit trop tard.</em></div>
+</div>
+</div><!-- /theory -->
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+</div>
+<div id="st_S11" class="sec-pane">
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-teal">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Hugo — <em>Les Misérables</em> (1862)</b><small>Subjonctif imparfait · concordance classique</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#2db9a0">Il fallait qu'il <span class="ann" style="background:#c8f5e8" title="subjonctif imparfait — concordance classique après il fallait que">choisît</span>. Il était nécessaire qu'il se <span class="ann" style="background:#c8f5e8" title="subjonctif imparfait">décidât</span>. Il <span class="ann" style="background:#ffe8d8" title="imparfait — état psychologique">voyait</span> devant lui deux routes et <span class="ann" style="background:#ffe8d8" title="imparfait — état">tremblait</span> à l'idée qu'il lui <span class="ann" style="background:#c8f5e8" title="subjonctif imparfait — après craindre que">fallût</span> choisir.</div>
+    <div class="lit-note">🟢 Subjonctif imparfait (concordance classique) : verbe principal au passé → subjonctif imparfait dans la subordonnée. Langue moderne : <em>choisisse, décide, faille</em>.</div>
+  </div>
+</div>
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-teal">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Hugo — <em>Les Misérables</em> (1862)</b><small>Subjonctif imparfait · concordance classique</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#2db9a0">Il fallait qu'il <span class="ann" style="background:#c8f5e8" title="subjonctif imparfait — concordance classique">choisît</span>. Il était nécessaire qu'il se <span class="ann" style="background:#c8f5e8" title="subjonctif imparfait">décidât</span>. Il <span class="ann" style="background:#ffe8d8" title="imparfait — état">voyait</span> deux routes et <span class="ann" style="background:#ffe8d8" title="imparfait — état">tremblait</span> à l'idée qu'il lui <span class="ann" style="background:#c8f5e8" title="subjonctif imparfait">fallût</span> choisir.</div>
+    <div class="lit-note">🟢 Subjonctif imparfait (concordance classique) : verbe principal au passé → subjonctif imparfait. Langue moderne : <em>choisisse, décide, faille</em>.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">2.1</span>
+  <p class="qtxt"><em>Espérer que</em> — quel mode ?</p>
+  <p class="qsent">J'espère qu'elle ______ à la réunion demain.</p>
+  <div class="opts" id="Q21">
+    <button class="opt" onclick="mcq('Q21',this,false)">vienne (subjonctif)</button>
+    <button class="opt" onclick="mcq('Q21',this,true)">viendra (futur indicatif)</button>
+    <button class="opt" onclick="mcq('Q21',this,false)">soit venue (subjonctif passé)</button>
+  </div>
+  <div class="hint" id="HQ21"><em>Espérer que</em> → toujours indicatif. Exception parmi les verbes de souhait.</div>
+  <div class="fb" id="FQ21"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ21')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">2.2</span>
+  <p class="qtxt">Subjonctif présent — conjuguez :</p>
+  <p class="qsent">Il est indispensable que vous <input class="blank" id="B22a" placeholder="(lire)" style="width:80px"> ce document avant que la réunion ne <input class="blank" id="B22b" placeholder="(commencer)" style="width:110px">.</p>
+  <div class="hint" id="HB22">Radical de la 3e pers. pl. du présent + -e/-es/-e/-ions/-iez/-ent.</div>
+  <div class="fb" id="FB22"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB22',[['B22a',['lisiez']],['B22b',['commence']]],'Bravo ! Deux déclencheurs classiques.','Attendu : <b>lisiez</b> / <b>commence</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB22')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">2.3</span>
+  <p class="qtxt">Subjonctif passé — antériorité :</p>
+  <p class="qsent">Je suis surpris que tu <input class="blank" id="B25" placeholder="(accepter)" style="width:120px"> sans lire les clauses.</p>
+  <div class="hint" id="HB25">Subjonctif passé = auxiliaire au subjonctif présent + participe passé. L'acceptation est antérieure à la surprise.</div>
+  <div class="fb" id="FB25"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB25','B25',['aies accepté'],'Parfait ! Subjonctif passé : action accomplie antérieure.','Attendu : <b>aies accepté</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB25')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">2.4</span>
+  <p class="qtxt">Subjonctif imparfait littéraire — concordance classique :</p>
+  <p class="qsent">Le directeur souhaitait qu'on lui <input class="blank" id="B26" placeholder="(soumettre — litt.)" style="width:120px"> le rapport avant midi.</p>
+  <div class="hint" id="HB26">Concordance classique : verbe principal au passé → subjonctif imparfait. <em>Soumettre</em>, 3e pers. sg : <em>soumît</em>.</div>
+  <div class="fb" id="FB26"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB26','B26',['soumît','soumit'],'Parfait ! Subjonctif imparfait, concordance classique.','Attendu : <b>soumît</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB26')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">2.5</span>
+  <p class="qtxt"><em>Il semble que</em> vs <em>il me semble que</em> :</p>
+  <p class="qsent">Il semble que cette solution ______ la plus efficace.</p>
+  <div class="opts" id="Q23">
+    <button class="opt" onclick="mcq('Q23',this,true)">soit (subjonctif)</button>
+    <button class="opt" onclick="mcq('Q23',this,false)">est (indicatif)</button>
+    <button class="opt" onclick="mcq('Q23',this,false)">serait (conditionnel)</button>
+  </div>
+  <div class="hint" id="HQ23"><em>Il semble que</em> (objectif, incertitude) → subjonctif. <em>Il me semble que</em> (opinion personnelle) → indicatif.</div>
+  <div class="fb" id="FQ23"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ23')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">2.6</span>
+  <p class="qtxt">Subjonctif en proposition indépendante — valeur :</p>
+  <p class="qsent"><b>Puisse</b>-t-il se remettre rapidement de cette épreuve.</p>
+  <div class="opts" id="Q27">
+    <button class="opt" onclick="mcq('Q27',this,false)">Nécessité</button>
+    <button class="opt" onclick="mcq('Q27',this,true)">Souhait en proposition indépendante</button>
+    <button class="opt" onclick="mcq('Q27',this,false)">Après conjonction</button>
+  </div>
+  <div class="hint" id="HQ27">Le subjonctif seul exprime un souhait (<em>Puisse-t-il…</em>), une injonction (<em>Qu'il entre !</em>), une supposition (<em>Soit un triangle…</em>).</div>
+  <div class="fb" id="FQ27"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ27')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">2.7</span>
+  <p class="qtxt">Le <em>ne</em> est-il négatif ou explétif ?</p>
+  <p class="qsent">Partez avant qu'il <b>ne</b> soit trop tard.</p>
+  <div class="opts" id="Q25">
+    <button class="opt" onclick="mcq('Q25',this,false)">Négatif</button>
+    <button class="opt" onclick="mcq('Q25',this,true)">Explétif (sans valeur négative)</button>
+    <button class="opt" onclick="mcq('Q25',this,false)">Équivaut à ne… pas</button>
+  </div>
+  <div class="hint" id="HQ25">Après <em>avant que</em>, le <em>ne</em> est purement stylistique. Le supprimer ne change pas le sens.</div>
+  <div class="fb" id="FQ25"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ25')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">2.8</span>
+  <p class="qtxt">Croire à l'interrogatif — indicatif ou subjonctif ?</p>
+  <p class="qsent">Croyez-vous qu'il ______ capable de tenir cette promesse ?</p>
+  <div class="opts" id="Q28">
+    <button class="opt" onclick="mcq('Q28',this,false)">est (indicatif seulement)</button>
+    <button class="opt" onclick="mcq('Q28',this,false)">soit (subjonctif seulement)</button>
+    <button class="opt" onclick="mcq('Q28',this,true)">soit ou est — les deux corrects selon l'intention</button>
+  </div>
+  <div class="hint" id="HQ28">À l'interrogatif, <em>croire que</em> accepte l'indicatif (réponse positive attendue) ou le subjonctif (doute véritable).</div>
+  <div class="fb" id="FQ28"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ28')">💡 Indice</button></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 3 — CONDITIONNEL
+══════════════════════════════════════════════ -->
+<div class="sec" id="S2">
+<div class="sec-head"><span class="ico">💭</span><div><h2>Le conditionnel</h2><p>Présent & passé · valeurs modales · hypothèses</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S2',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S2',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S20" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Le conditionnel</h2>
+<div class="subtabs">
+  <button class="stab on" onclick="stab('cond',0,this)">Présent</button>
+  <button class="stab" onclick="stab('cond',1,this)">Passé</button>
+  <button class="stab" onclick="stab('cond',2,this)">Valeurs modales</button>
+  <button class="stab" onclick="stab('cond',3,this)">Système hypothèses</button>
+</div>
+<div id="cond0" class="stpane on">
+<h3>Conditionnel présent</h3>
+<table class="ctbl"><tr><th>Pronom</th><th>parler</th><th>finir</th><th>Irréguliers</th></tr>
+<tr><td>je</td><td><em>parlerais</em></td><td><em>finirais</em></td><td>serais / aurais / irais / ferais / viendrais / verrais / pourrais / voudrais / saurais / devrais</td></tr>
+<tr class="group"><td>tu</td><td><em>parlerais</em></td><td><em>finirais</em></td><td>serais / aurais / irais…</td></tr>
+<tr><td>il/elle</td><td><em>parlerait</em></td><td><em>finirait</em></td><td>serait / aurait / irait / ferait…</td></tr>
+<tr class="group"><td>nous</td><td><em>parlerions</em></td><td><em>finirions</em></td><td>serions / aurions / irions…</td></tr>
+<tr><td>vous</td><td><em>parleriez</em></td><td><em>finiriez</em></td><td>seriez / auriez / iriez…</td></tr>
+<tr class="group"><td>ils</td><td><em>parleraient</em></td><td><em>finiraient</em></td><td>seraient / auraient / iraient…</td></tr></table>
+<div class="rule"><strong>Formation :</strong> radical du futur simple + terminaisons de l'imparfait (<em>-ais/-ais/-ait/-ions/-iez/-aient</em>). Mêmes irrégularités qu'au futur.</div>
+<div class="warn"><strong>Règle absolue :</strong> jamais de conditionnel dans la proposition en <em>si</em> hypothétique. <em>*Si je voudrais</em> est une faute grave. Exception : <em>si</em> interrogatif indirect accepte le conditionnel. <em>Je me demande si elle <b>viendrait</b>.</em></div>
+</div>
+<div id="cond1" class="stpane">
+<h3>Conditionnel passé — 1re et 2e formes</h3>
+<table class="ctbl"><tr><th>Forme</th><th>avec avoir</th><th>avec être</th></tr>
+<tr><td>1re forme</td><td><em>j'aurais parlé</em></td><td><em>je serais venu(e)</em></td></tr>
+<tr class="group"><td>2e forme (litt.)</td><td><em>j'eusse parlé</em></td><td><em>je fusse venu(e)</em></td></tr></table>
+<div class="rule"><strong>1re forme :</strong> hypothèse irréelle dans le passé. <em>Si tu m'avais prévenu, j'<b>aurais pu</b> intervenir.</em></div>
+<div class="rule"><strong>2e forme :</strong> stylistiquement identique, très littéraire, limitée en pratique à la 3e pers. sg. Identique au subjonctif plus-que-parfait : <em>Il <b>eût mieux valu</b> se taire.</em></div>
+<div class="ok-rule"><strong>Forme mixte (C2) :</strong> protase au passé, apodose au présent — quand la condition porte sur le passé mais la conséquence se prolonge au présent. <em>Si tu <b>avais dormi</b>, tu ne <b>serais</b> pas si irritable <b>ce matin</b>.</em></div>
+</div>
+<div id="cond2" class="stpane">
+<h3>Valeurs modales du conditionnel</h3>
+<div class="rule"><strong>1. Politesse et atténuation :</strong> <em><b>Pourriez</b>-vous m'expliquer ? / Je <b>dirais</b> plutôt que…</em></div>
+<div class="rule"><strong>2. Conditionnel journalistique</strong> (information non vérifiée) : <em>Le ministre <b>aurait démissionné</b> ce matin</em> — selon des sources, non confirmé.</div>
+<div class="rule"><strong>3. Indignation / incrédulité :</strong> <em>Moi, je <b>mentirais</b> ? C'est absurde !</em></div>
+<div class="rule"><strong>4. Jeu et imaginaire :</strong> <em>On <b>serait</b> des pirates et on <b>chercherait</b> un trésor.</em> (Baudelaire : <em>tout ne <b>serait</b> qu'ordre et beauté</em>)</div>
+<div class="rule"><strong>5. Futur dans le passé :</strong> <em>Il savait qu'il ne la <b>reverrait</b> jamais.</em></div>
+</div>
+<div id="cond3" class="stpane">
+<h3>Système des conditionnelles</h3>
+<table class="ctbl"><tr><th>Protase (si)</th><th>Apodose (principale)</th><th>Type</th></tr>
+<tr><td>si + présent</td><td>futur / présent / impératif</td><td>Hypothèse réelle (potentiel)</td></tr>
+<tr class="group"><td>si + imparfait</td><td>conditionnel présent</td><td>Irréel du présent</td></tr>
+<tr><td>si + plus-que-parfait</td><td>conditionnel passé</td><td>Irréel du passé</td></tr>
+<tr class="group"><td>si + plus-que-parfait</td><td>conditionnel présent</td><td>Mixte : passé → présent</td></tr></table>
+<div class="rule"><strong>Alternatives à <em>si</em> :</strong> à condition que + subj. / à supposer que + subj. / au cas où + conditionnel / dans l'hypothèse où + conditionnel / inversion littéraire sans si : <em>Eût-il su…</em></div>
+<span class="ex-inline"><b>Au cas où</b> il changerait d'avis → conditionnel (non subjonctif !)</span>
+</div>
+</div>
+</div>
+<div id="st_S21" class="sec-pane">
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-pink">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Baudelaire — <em>Le Spleen de Paris</em> (1869)</b><small>Conditionnel de rêve et d'imaginaire</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#d45c8a">Là, tout ne <span class="ann" style="background:#f9e0ee" title="conditionnel — désir, monde imaginaire">serait</span> qu'ordre et beauté. Nous <span class="ann" style="background:#f9e0ee" title="conditionnel — projection dans un monde rêvé">aurions</span> cette chambre qui te <span class="ann" style="background:#f9e0ee" title="conditionnel — suite de l'hypothèse implicite">ressemblerait</span>, et ce vaste ciel qui <span class="ann" style="background:#f9e0ee" title="conditionnel — irréel du présent">illuminerait</span> tes yeux.</div>
+    <div class="lit-note">Le conditionnel ici exprime un rêve — la protase (<em>si nous partions</em>) est sous-entendue. Valeur modale d'imaginaire.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">3.1</span>
+  <p class="qtxt">Quelle combinaison est incorrecte ?</p>
+  <div class="opts" id="Q31">
+    <button class="opt" onclick="mcq('Q31',this,false)">Si + présent → futur simple</button>
+    <button class="opt" onclick="mcq('Q31',this,false)">Si + imparfait → conditionnel présent</button>
+    <button class="opt" onclick="mcq('Q31',this,true)">Si + imparfait → conditionnel présent dans la subordonnée en si</button>
+    <button class="opt" onclick="mcq('Q31',this,false)">Si + plus-que-parfait → conditionnel passé</button>
+  </div>
+  <div class="hint" id="HQ31">Le conditionnel ne peut JAMAIS figurer dans la proposition en <em>si</em> hypothétique.</div>
+  <div class="fb" id="FQ31"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ31')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">3.2</span>
+  <p class="qtxt">Hypothèse mixte — condition passée, conséquence présente :</p>
+  <p class="qsent">Si tu <input class="blank" id="B32a" placeholder="(dormir)" style="width:110px"> hier soir, tu ne <input class="blank" id="B32b" placeholder="(être)" style="width:80px"> pas si irritable ce matin.</p>
+  <div class="hint" id="HB32">Protase passée → plus-que-parfait. Apodose présente → conditionnel présent.</div>
+  <div class="fb" id="FB32"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB32',[['B32a',['avais dormi']],['B32b',['serais']]],'Parfait ! Forme mixte.','Attendu : <b>avais dormi</b> / <b>serais</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB32')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">3.3</span>
+  <p class="qtxt">Conditionnel de politesse :</p>
+  <p class="qsent"><input class="blank" id="B34c" placeholder="(pouvoir — vous)" style="width:110px">-vous m'expliquer votre raisonnement ?</p>
+  <div class="hint" id="HB34c">Le conditionnel présent atténue une demande, la rend plus courtoise qu'un impératif direct.</div>
+  <div class="fb" id="FB34c"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB34c','B34c',['pourriez','Pourriez'],'Correct ! <em>Pourriez-vous</em> = forme de politesse par excellence.','Attendu : <b>Pourriez</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB34c')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">3.4</span>
+  <p class="qtxt">Conditionnel passé — hypothèse irréelle dans le passé :</p>
+  <p class="qsent">Si tu m'avais prévenu à temps, j'<input class="blank" id="B35" placeholder="(pouvoir) intervenir" style="width:100px"> intervenir.</p>
+  <div class="hint" id="HB35">Si + plus-que-parfait → conditionnel passé. Auxiliaire au conditionnel + participe passé.</div>
+  <div class="fb" id="FB35"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB35','B35',['aurais pu'],'Parfait ! Si + PQP → conditionnel passé.','Attendu : <b>aurais pu</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB35')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">3.5</span>
+  <p class="qtxt">Valeur du conditionnel dans cet extrait de presse :</p>
+  <p class="qsent">Le ministre <b>aurait signé</b> le décret ce matin, selon nos sources.</p>
+  <div class="opts" id="Q33">
+    <button class="opt" onclick="mcq('Q33',this,false)">Hypothèse irréelle dans le passé</button>
+    <button class="opt" onclick="mcq('Q33',this,true)">Information non vérifiée (conditionnel journalistique)</button>
+    <button class="opt" onclick="mcq('Q33',this,false)">Futur dans le passé</button>
+  </div>
+  <div class="fb" id="FQ33"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ33')">💡 Indice</button></div>
+  <div class="hint" id="HQ33">Conditionnel journalistique : information rapportée mais non vérifiée. Très courant en presse écrite.</div>
+</div>
+
+<div class="card">
+  <span class="tag write">Écriture</span><span class="qnum">3.6</span>
+  <p class="qtxt">Inversion littéraire sans <em>si</em> (subjonctif PQP) :</p>
+  <p class="qsent norm">Original : <em>Si elle avait su la vérité, elle n'aurait jamais signé.</em></p>
+  <textarea class="ta" id="T36" placeholder="Eût-elle..."></textarea>
+  <div class="hint" id="HT36">Subjonctif PQP + inversion : <em>Eût-elle su…</em> = conditionnel passé sans <em>si</em>.</div>
+  <div class="fb" id="FT36"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="textarea1('FT36','T36',['eût-elle su','eut-elle su'],'Excellent ! L'inversion littéraire sans <em>si</em>.','Attendu : <b>Eût-elle su la vérité, elle n'aurait jamais signé.</b>')">Vérifier</button>
+    <button class="bh" onclick="hint('HT36')">💡 Indice</button>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 4 — IMPERATIF
+══════════════════════════════════════════════ -->
+<div class="sec" id="S3">
+<div class="sec-head"><span class="ico">📢</span><div><h2>L'impératif</h2><p>Présent & passé · pronoms · irréguliers</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S3',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S3',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S30" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — L'impératif</h2>
+<table class="ctbl"><tr><th>Personne</th><th>-er (parler)</th><th>-ir (finir)</th><th>être</th><th>avoir</th><th>savoir</th><th>vouloir</th></tr>
+<tr><td>tu (prés.)</td><td><em>parle !</em></td><td><em>finis !</em></td><td>sois !</td><td>aie !</td><td>sache !</td><td>veuille !</td></tr>
+<tr class="group"><td>nous (prés.)</td><td><em>parlons !</em></td><td><em>finissons !</em></td><td>soyons !</td><td>ayons !</td><td>sachons !</td><td>veuillons !</td></tr>
+<tr><td>vous (prés.)</td><td><em>parlez !</em></td><td><em>finissez !</em></td><td>soyez !</td><td>ayez !</td><td>sachez !</td><td>veuillez !</td></tr>
+<tr class="group"><td>tu (passé)</td><td colspan="6"><em>aie parlé ! / sois venu(e) !</em></td></tr>
+<tr><td>vous (passé)</td><td colspan="6"><em>ayez parlé ! / soyez venu(e)s !</em></td></tr></table>
+<div class="rule"><strong>-s final supprimé à la 2e sg :</strong> tous les verbes en -er perdent le <em>s</em> : <em>parle, mange, va</em>. Mais il réapparaît devant <em>y</em> et <em>en</em> pour la liaison : <em>Parles-en ! Vas-y !</em></div>
+<div class="rule"><strong>Pronoms à l'impératif affirmatif :</strong> après le verbe, reliés par un trait d'union. <em>Donne-le-moi. / Rends-le-lui. / Achète-m'en.</em> — <em>moi</em> et <em>toi</em> remplacent <em>me</em> et <em>te</em> en position finale.</div>
+<div class="rule"><strong>Impératif négatif :</strong> pronoms en position proclitique (avant le verbe). <em>Ne me le donne pas. / Ne lui en parle pas.</em></div>
+<div class="rule"><strong>Impératif passé :</strong> action à accomplir avant un moment futur. <em>Ayez terminé ce rapport avant lundi.</em></div>
+<div class="warn"><em>Veuillez agréer…</em> — formule épistolaire épistémique ; <em>veuillez</em> est l'impératif de <em>vouloir</em>, seul emploi courant de cet impératif.</div>
+</div>
+</div>
+<div id="st_S31" class="sec-pane">
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-amber">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Rimbaud — <em>Le Bateau ivre</em> (1871)</b><small>Impératif d'injonction · subjonctif d'ordre</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#e8a020">Comme je descendais des Fleuves impassibles, je ne me <span class="ann" style="background:#fef3dc" title="passé simple — action narrative">sentis</span> plus guidé par les haleurs. <span class="ann" style="background:#fef3dc" title="subjonctif d'injonction (3e personne) : Qu'on ne me retienne plus">Qu'on</span> ne me retienne plus ! Je voulais voir ce que les hommes <span class="ann" style="background:#d8eeee" title="imparfait — état mental, croyance">croyaient</span> voir.</div>
+    <div class="lit-note">L'injonction à la 3e personne se forme avec <em>que + subjonctif</em> : <em>Qu'il entre ! Qu'on se taise !</em> — L'impératif n'a que 3 personnes (tu, nous, vous).</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">4.1</span>
+  <p class="qtxt">Quelle forme est correcte à la 2e pers. sg devant <em>en</em> ?</p>
+  <div class="opts" id="Q41">
+    <button class="opt" onclick="mcq('Q41',this,false)">Parle-en à ta mère !</button>
+    <button class="opt" onclick="mcq('Q41',this,true)">Parles-en à ta mère !</button>
+    <button class="opt" onclick="mcq('Q41',this,false)">Parle en à ta mère !</button>
+  </div>
+  <div class="hint" id="HQ41">Le -s réapparaît devant <em>en</em> et <em>y</em> pour faciliter la liaison. Trait d'union obligatoire.</div>
+  <div class="fb" id="FQ41"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ41')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">4.2</span>
+  <p class="qtxt">Impératif affirmatif avec pronoms — ordre correct :</p>
+  <p class="qsent norm">« Tu dois lui donner le livre. » →
+  <input class="blank" id="B42" placeholder="Impératif + pronoms" style="width:160px"> !</p>
+  <div class="hint" id="HB42">Ordre : verbe + COD + COI, reliés par traits d'union. <em>Donne-le-lui.</em></div>
+  <div class="fb" id="FB42"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB42','B42',['donne-le-lui','Donne-le-lui'],'Parfait ! Verbe + COD (<em>le</em>) + COI (<em>lui</em>).','Attendu : <b>Donne-le-lui</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB42')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">4.3</span>
+  <p class="qtxt">Impératif négatif — quelle forme est correcte ?</p>
+  <div class="opts" id="Q43">
+    <button class="opt" onclick="mcq('Q43',this,false)">Dis-le-lui pas !</button>
+    <button class="opt" onclick="mcq('Q43',this,true)">Ne le lui dis pas !</button>
+    <button class="opt" onclick="mcq('Q43',this,false)">Ne lui-le dis pas !</button>
+  </div>
+  <div class="hint" id="HQ43">À l'impératif négatif, les pronoms reprennent leur position proclitique (avant le verbe).</div>
+  <div class="fb" id="FQ43"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ43')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">4.4</span>
+  <p class="qtxt">Impératif passé — action à accomplir avant un moment fixé :</p>
+  <p class="qsent"><input class="blank" id="B44b" placeholder="(terminer — vous)" style="width:150px"> ce rapport avant lundi matin.</p>
+  <div class="hint" id="HB44b">Impératif passé : <em>ayez + participe passé</em>. Action à accomplir avant un moment futur précis.</div>
+  <div class="fb" id="FB44b"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB44b','B44b',['ayez terminé','Ayez terminé'],'Correct ! Impératif passé = action accomplie avant lundi.','Attendu : <b>Ayez terminé</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB44b')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">4.5</span>
+  <p class="qtxt">Pronoms à l'impératif affirmatif avec <em>en</em> :</p>
+  <p class="qsent norm">« Achète des pommes pour moi ! » →
+  <input class="blank" id="B45" placeholder="Impératif + pronoms" style="width:150px"> !</p>
+  <div class="hint" id="HB45"><em>Achètes-m'en</em> : -s réapparaît devant <em>en</em>, <em>me</em> → <em>m'</em> devant voyelle.</div>
+  <div class="fb" id="FB45"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB45','B45',["achètes-m'en","Achètes-m'en"],'Parfait ! -s + m\'en devant voyelle.','Attendu : <b>Achètes-m'en</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB45')">💡 Indice</button>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 5 — MODES NON PERSONNELS
+══════════════════════════════════════════════ -->
+<div class="sec" id="S4">
+<div class="sec-head"><span class="ico">🔤</span><div><h2>Les modes non personnels</h2><p>Infinitif · participe · gérondif — formes, valeurs, exemples</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S4',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S4',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S40" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Modes non personnels</h2>
+<div class="subtabs">
+  <button class="stab on" onclick="stab('nonp',0,this)">Infinitif</button>
+  <button class="stab" onclick="stab('nonp',1,this)">Participe présent</button>
+  <button class="stab" onclick="stab('nonp',2,this)">Gérondif</button>
+  <button class="stab" onclick="stab('nonp',3,this)">Participe passé</button>
+</div>
+
+<div id="nonp0" class="stpane on">
+<h3>Infinitif présent et passé</h3>
+<table class="ctbl"><tr><th>Forme</th><th>Exemples</th><th>Valeur</th></tr>
+<tr><td>Présent</td><td><em>parler, finir, prendre, être, avoir</em></td><td>Action simultanée ou postérieure au verbe principal</td></tr>
+<tr class="group"><td>Passé</td><td><em>avoir parlé, être venu(e), s'être levé(e)</em></td><td>Action antérieure au verbe principal</td></tr></table>
+<div class="rule"><strong>Après <em>après</em> :</strong> toujours infinitif passé. <em>Après <b>avoir mangé</b>, il s'endormit.</em> — *<em>Après manger</em> est incorrect en registre soutenu.</div>
+<div class="rule"><strong>Infinitif à valeur impérative :</strong> recettes, modes d'emploi, consignes. <em><b>Battre</b> les œufs en neige. <b>Ajouter</b> le sucre.</em></div>
+<div class="rule"><strong>Infinitif de narration :</strong> <em>Et lui de <b>rire</b> !</em> / <em>Et tout le monde d'<b>applaudir</b>.</em> — registre archaïsant mais vivant, exprime une réaction vive.</div>
+<span class="ex-inline">Je regrette d'<b>avoir dit</b> cela. | <b>Ayant lu</b> le rapport, il convoqua une réunion.</span>
+</div>
+
+<div id="nonp1" class="stpane">
+<h3>Participe présent</h3>
+<table class="ctbl"><tr><th>Forme</th><th>Exemples</th></tr>
+<tr><td>Présent simple</td><td><em>parlant, finissant, prenant, étant, ayant, allant, faisant, sachant</em></td></tr>
+<tr class="group"><td>Présent composé</td><td><em>ayant parlé, étant venu(e), s'étant levé(e)</em></td></tr></table>
+<div class="rule"><strong>Participe présent vs adjectif verbal :</strong> le participe présent est invariable et exprime une action. L'adjectif verbal s'accorde et exprime un état. <em>Une enfant <b>obéissante</b></em> (adj.) vs <em>une enfant <b>obéissant</b> à ses parents</em> (participe).</div>
+<div class="rule"><strong>Participe présent composé :</strong> exprime l'antériorité. <em><b>Ayant lu</b> le rapport, il convoqua une réunion d'urgence.</em></div>
+<div class="rule"><strong>Proposition participiale absolue :</strong> le participe a son propre sujet. <em><b>La réunion terminée</b>, chacun regagna son bureau.</em></div>
+</div>
+
+<div id="nonp2" class="stpane">
+<h3>Gérondif</h3>
+<table class="ctbl"><tr><th>Forme</th><th>Exemples</th></tr>
+<tr><td>Gérondif présent</td><td><em>en parlant, en finissant, en prenant, en étant, en ayant</em></td></tr>
+<tr class="group"><td>Gérondif passé (rare)</td><td><em>en ayant parlé, en étant venu(e)</em></td></tr></table>
+<div class="rule"><strong>Toujours précédé de <em>en</em>.</strong> Exprime la simultanéité, la manière, la condition, la cause.</div>
+<div class="warn"><strong>Règle de coréférence :</strong> le sujet du gérondif DOIT être identique au sujet du verbe principal. <em>*En travaillant, ses résultats s'amélioreront</em> est une faute — ce sont les résultats qui travailleraient.</em></div>
+<span class="ex-inline">C'est <b>en forgeant</b> qu'on devient forgeron. (simultanéité = moyen)</span>
+<span class="ex-inline"><b>En relisant</b> ses notes, elle réalisa son erreur. (sujet identique : elle)</span>
+</div>
+
+<div id="nonp3" class="stpane">
+<h3>Participe passé — emplois syntaxiques</h3>
+<table class="ctbl"><tr><th>Emploi</th><th>Règle</th><th>Exemple</th></tr>
+<tr><td>Avec être (passif / intransitifs)</td><td>Accord avec le sujet</td><td><em>Elle est <b>partie</b>. Ils sont <b>arrivés</b>.</em></td></tr>
+<tr class="group"><td>Avec avoir</td><td>Accord avec le COD antéposé seulement</td><td><em>Les lettres qu'il a <b>écrites</b>. / Il les a <b>vues</b>.</em></td></tr>
+<tr><td>Faire + infinitif</td><td>Toujours invariable</td><td><em>Les résultats qu'il a <b>fait</b> publier.</em></td></tr>
+<tr class="group"><td>En partitif</td><td>Pas d'accord</td><td><em>Des pommes ? J'en ai <b>mangé</b>.</em></td></tr>
+<tr><td>Pronominaux (se = COD)</td><td>Accord avec se</td><td><em>Elles se sont <b>lavées</b>.</em></td></tr>
+<tr class="group"><td>Pronominaux (se = COI)</td><td>Pas d'accord</td><td><em>Elles se sont <b>lavé</b> les mains.</em></td></tr>
+<tr><td>Participe + infinitif</td><td>Accord si COD = sujet logique de l'inf.</td><td><em>Les actrices qu'il a <b>entendues</b> chanter.</em></td></tr></table>
+</div>
+</div><!-- /theory -->
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+</div>
+<div id="st_S41" class="sec-pane">
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-amber">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Zola — <em>Germinal</em> (1885)</b><small>Participes passés · propositions participiales absolues</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#e8a020">Dans la plaine rase, un homme suivait seul la grande route. Les corons <span class="ann" style="background:#fef3dc" title="participe passé adjectival, accordé avec corons (masc. pl.)">endormis</span> ne montraient pas une lueur. Des femmes <span class="ann" style="background:#fef3dc" title="participe passé accordé avec femmes (fém. pl.) — proposition participiale absolue">sorties</span> de leurs maisons les regardaient passer, les bras <span class="ann" style="background:#fef3dc" title="participe passé accordé avec bras (masc. pl.)">croisés</span> sur la poitrine.</div>
+    <div class="lit-note">Style naturaliste : propositions participiales compactes (<em>sorties de leurs maisons, les bras croisés</em>) pour densifier la description sans multiplier les verbes conjugués.</div>
+  </div>
+</div>
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-amber">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Zola — <em>Germinal</em> (1885)</b><small>Participes passés · propositions participiales</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#e8a020">Dans la plaine rase, un homme suivait seul la grande route. Les corons <span class="ann" style="background:#fef3dc" title="participe passé adjectival accordé avec corons (masc. pl.)">endormis</span> ne montraient pas une lueur. Des femmes <span class="ann" style="background:#fef3dc" title="participe passé accordé avec femmes (fém. pl.) — proposition participiale absolue">sorties</span> de leurs maisons les regardaient passer, les bras <span class="ann" style="background:#fef3dc" title="participe passé accordé avec bras (masc. pl.)">croisés</span> sur la poitrine.</div>
+    <div class="lit-note">Style naturaliste : propositions participiales compactes pour densifier la description sans multiplier les verbes conjugués.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">5.1</span>
+  <p class="qtxt">Règle de coréférence du gérondif — laquelle est correcte ?</p>
+  <div class="opts" id="Q51">
+    <button class="opt" onclick="mcq('Q51',this,false)">a) En travaillant, ses résultats s'amélioreront.</button>
+    <button class="opt" onclick="mcq('Q51',this,false)">b) En rentrant chez elle, la pluie a commencé.</button>
+    <button class="opt" onclick="mcq('Q51',this,true)">c) En relisant ses notes, elle réalisa son erreur.</button>
+    <button class="opt" onclick="mcq('Q51',this,false)">d) En marchant vite, le bus fut rattrapé.</button>
+  </div>
+  <div class="hint" id="HQ51">Le sujet du gérondif doit être identique au sujet du verbe principal. En c), <em>elle</em> relit et réalise.</div>
+  <div class="fb" id="FQ51"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ51')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">5.2</span>
+  <p class="qtxt">Participe présent ou adjectif verbal ?</p>
+  <div class="opts" id="Q55">
+    <button class="opt" onclick="mcq('Q55',this,false)">a) Une enfant <em>obéissante</em> à ses parents rentre à l'heure.</button>
+    <button class="opt" onclick="mcq('Q55',this,true)">b) Une enfant <em>obéissant</em> à ses parents rentre à l'heure.</button>
+  </div>
+  <div class="hint" id="HQ55">Avec un complément (<em>à ses parents</em>) → participe présent invariable. Sans complément → adjectif verbal accordé (<em>obéissante</em>).</div>
+  <div class="fb" id="FQ55"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ55')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">5.3</span>
+  <p class="qtxt">Participe passé composé — antériorité :</p>
+  <p class="qsent"><input class="blank" id="B52" placeholder="(lire — participe composé)" style="width:110px"> le rapport, il convoqua une réunion d'urgence.</p>
+  <div class="hint" id="HB52">Participe passé composé = <em>ayant + participe passé</em>. Exprime l'antériorité par rapport au verbe principal.</div>
+  <div class="fb" id="FB52"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB52','B52',['ayant lu','Ayant lu'],'Parfait ! Participe passé composé = antériorité.','Attendu : <b>Ayant lu</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB52')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">5.4</span>
+  <p class="qtxt">Quelle forme est correcte après <em>après</em> ?</p>
+  <div class="opts" id="Q53">
+    <button class="opt" onclick="mcq('Q53',this,false)">Après manger, il s'endormit.</button>
+    <button class="opt" onclick="mcq('Q53',this,true)">Après avoir mangé, il s'endormit.</button>
+    <button class="opt" onclick="mcq('Q53',this,false)">Après qu'il mangea, il s'endormit.</button>
+  </div>
+  <div class="hint" id="HQ53"><em>Après</em> exige toujours l'infinitif passé. *<em>Après manger</em> est incorrect en registre soutenu.</div>
+  <div class="fb" id="FQ53"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ53')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">5.5</span>
+  <p class="qtxt">Infinitif passé obligatoire après <em>après</em> :</p>
+  <p class="qsent"><input class="blank" id="B54" placeholder="(relire — après)" style="width:160px"> son texte trois fois, elle décida de l'envoyer.</p>
+  <div class="hint" id="HB54"><em>Après</em> + infinitif passé : <em>après avoir + participe</em>.</div>
+  <div class="fb" id="FB54"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB54','B54',['après avoir relu','Après avoir relu'],'Parfait ! <em>Après</em> + infinitif passé obligatoire.','Attendu : <b>Après avoir relu</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB54')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">5.6</span>
+  <p class="qtxt">Proposition participiale absolue — reformulez :</p>
+  <p class="qsent norm">Original : <em>Une fois que la réunion fut terminée, chacun regagna son bureau.</em><br>
+  <input class="blank" id="B56" placeholder="Participiale absolue" style="width:200px">, chacun regagna son bureau.</p>
+  <div class="hint" id="HB56">Participiale absolue : le participe a son propre sujet nominal. <em>La réunion terminée, …</em></div>
+  <div class="fb" id="FB56"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB56','B56',['la réunion terminée','La réunion terminée'],'Parfait ! Participiale absolue compacte et élégante.','Attendu : <b>La réunion terminée</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB56')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">5.7</span>
+  <p class="qtxt">Infinitif de narration — reformulez :</p>
+  <p class="qsent norm">Original : <em>Et il rit de plus belle.</em><br>
+  <input class="blank" id="B57" placeholder="Et lui de..." style="width:140px"> de plus belle.</p>
+  <div class="hint" id="HB57">Infinitif de narration : <em>Et [pronom tonique] de + infinitif</em>. Réaction vive, style archaïsant.</div>
+  <div class="fb" id="FB57"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB57','B57',['et lui de rire','Et lui de rire'],'Excellent ! Infinitif de narration.','Attendu : <b>Et lui de rire</b> de plus belle.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB57')">💡 Indice</button>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 6 — CONCORDANCE
+══════════════════════════════════════════════ -->
+<div class="sec" id="S5">
+<div class="sec-head"><span class="ico">🔗</span><div><h2>La concordance des temps</h2><p>Discours indirect · subordonnées temporelles · hypothèses</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S5',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S5',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S50" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Concordance des temps</h2>
+<h3>Discours indirect — transformations</h3>
+<table class="ctbl"><tr><th>Discours direct</th><th>→ Discours indirect (verbe au passé)</th></tr>
+<tr><td>présent</td><td>imparfait</td></tr>
+<tr class="group"><td>futur simple</td><td>conditionnel présent</td></tr>
+<tr><td>futur antérieur</td><td>conditionnel passé</td></tr>
+<tr class="group"><td>passé composé</td><td>plus-que-parfait</td></tr>
+<tr><td>imparfait</td><td>imparfait (inchangé)</td></tr>
+<tr class="group"><td>plus-que-parfait</td><td>plus-que-parfait (inchangé)</td></tr>
+<tr><td>impératif</td><td>de + infinitif</td></tr>
+<tr class="group"><td>subjonctif présent</td><td>subjonctif imparfait (litt.) / présent (courant)</td></tr></table>
+<div class="rule"><strong>Expressions temporelles :</strong> aujourd'hui → ce jour-là | hier → la veille | demain → le lendemain | maintenant → alors | ici → là.</div>
+<div class="warn"><strong>Au cas où</strong> → conditionnel (non subjonctif). <em>Au cas où il <b>changerait</b> d'avis…</em></div>
+<h3 style="margin-top:.9rem">Subordonnées temporelles — futur</h3>
+<div class="rule">Après <em>quand, lorsque, dès que, aussitôt que, une fois que</em> dans un contexte futur → futur antérieur (si antériorité) ou futur simple (si simultanéité). <em>Dès qu'elle <b>aura fini</b>, elle partira.</em></div>
+</div>
+</div>
+<div id="st_S51" class="sec-pane">
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-coral">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Proust — <em>Du côté de chez Swann</em> (1913)</b><small>Concordance des temps · habitude · passé composé narratif</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#e8694a">Longtemps, je me <span class="ann" style="background:#fde4dc" title="passé composé — lien avec le présent du narrateur">suis couché</span> de bonne heure. Parfois, à peine ma bougie <span class="ann" style="background:#fde4dc" title="plus-que-parfait — antériorité">était-elle éteinte</span> que mes yeux se <span class="ann" style="background:#d8eeee" title="imparfait — habitude indéfinie">fermaient</span> si vite que je n'<span class="ann" style="background:#d8eeee" title="imparfait — état habituel">avais</span> pas le temps de me dire : « Je m'endors. »</div>
+    <div class="lit-note">Proust choisit le passé composé (non le passé simple) pour créer un lien entre le passé et le présent du narrateur. L'imparfait d'habitude traduit la répétition indéfinie.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">6.1</span>
+  <p class="qtxt">Discours indirect — transposez au passé :</p>
+  <p class="qsent norm">Direct : <em>« Je pars dès que j'aurai fini. »</em><br>
+  Indirect : Il a dit qu'il <input class="blank" id="B61a" placeholder="(partir)" style="width:80px"> dès qu'il <input class="blank" id="B61b" placeholder="(avoir fini)" style="width:110px">.</p>
+  <div class="hint" id="HB61">Présent → imparfait. Futur antérieur → conditionnel passé.</div>
+  <div class="fb" id="FB61"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB61',[['B61a',['partait']],['B61b',['aurait fini']]],'Parfait ! Concordance classique.','Attendu : <b>partait</b> / <b>aurait fini</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB61')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">6.2</span>
+  <p class="qtxt">Impératif → discours indirect :</p>
+  <p class="qsent norm">Direct : <em>« Attendez-moi ici ! »</em><br>
+  Il leur a demandé de <input class="blank" id="B63" placeholder="(attendre)" style="width:100px"> là.</p>
+  <div class="hint" id="HB63">Impératif → <em>de + infinitif</em> au discours indirect. <em>ici → là</em>.</div>
+  <div class="fb" id="FB63"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB63','B63',['attendre'],'Correct ! Impératif → de + infinitif.','Attendu : de <b>attendre</b> là.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB63')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">6.3</span>
+  <p class="qtxt">Expressions temporelles au discours indirect :</p>
+  <p class="qsent norm">Direct : <em>« Aujourd'hui je pars, demain je serai là-bas. »</em><br>
+  Il a dit que <input class="blank" id="B65a" placeholder="aujourd'hui →" style="width:110px"> il partait et que <input class="blank" id="B65b" placeholder="demain →" style="width:120px"> il serait là-bas.</p>
+  <div class="hint" id="HB65">Aujourd'hui → ce jour-là | demain → le lendemain | hier → la veille | maintenant → alors.</div>
+  <div class="fb" id="FB65"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB65',[['B65a',['ce jour-là']],['B65b',['le lendemain']]],'Parfait ! Repères temporels au discours indirect.','Attendu : <b>ce jour-là</b> / <b>le lendemain</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB65')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">6.4</span>
+  <p class="qtxt"><em>Au cas où</em> — quel mode ?</p>
+  <p class="qsent">Au cas où il ______ d'avis, prévenez-moi.</p>
+  <div class="opts" id="Q62">
+    <button class="opt" onclick="mcq('Q62',this,false)">change (subjonctif)</button>
+    <button class="opt" onclick="mcq('Q62',this,true)">changerait (conditionnel)</button>
+    <button class="opt" onclick="mcq('Q62',this,false)">changera (futur)</button>
+  </div>
+  <div class="hint" id="HQ62"><em>Au cas où</em> → conditionnel. Différent de <em>à condition que</em> → subjonctif.</div>
+  <div class="fb" id="FQ62"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ62')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">6.5</span>
+  <p class="qtxt">Futur antérieur dans une subordonnée temporelle :</p>
+  <p class="qsent">Quand vous <input class="blank" id="B64" placeholder="(lire)" style="width:100px"> ce rapport, vous comprendrez pourquoi j'ai refusé.</p>
+  <div class="hint" id="HB64"><em>Quand</em> + futur antérieur pour marquer l'antériorité par rapport au futur principal.</div>
+  <div class="fb" id="FB64"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB64','B64',['aurez lu'],'Parfait ! Futur antérieur obligatoire après <em>quand</em>.','Attendu : <b>aurez lu</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB64')">💡 Indice</button>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 7 — ACCORD PARTICIPE
+══════════════════════════════════════════════ -->
+<div class="sec" id="S6">
+<div class="sec-head"><span class="ico">✍️</span><div><h2>Accord du participe passé</h2><p>Règles complètes · cas particuliers · pièges</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S6',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S6',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S60" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Accord du participe passé</h2>
+<div class="rule"><strong>Avec être :</strong> accord en genre et nombre avec le sujet. <em>Elle est <b>partie</b>. Ils sont <b>arrivés</b>.</em></div>
+<div class="rule"><strong>Avec avoir :</strong> accord avec le COD si et seulement s'il est antéposé au verbe. Cas d'antéposition : pronom personnel COD, relatif <em>que</em>, interrogatif <em>quel</em>.</div>
+<div class="warn"><strong><em>En</em> partitif :</strong> ne déclenche jamais l'accord. <em>Des erreurs ? Il en a <b>commis</b>.</em></div>
+<div class="warn"><strong><em>Faire</em> + infinitif :</strong> toujours invariable. <em>Les résultats qu'il a <b>fait</b> publier.</em></div>
+<div class="warn"><strong>Participe + infinitif :</strong> accord si le COD antéposé est sujet logique de l'infinitif. <em>Les actrices qu'il a <b>entendues</b> chanter</em> (elles chantent) vs <em>Les chansons qu'il a <b>entendu</b> chanter</em> (on chante les chansons).</div>
+<div class="rule"><strong>Pronominaux :</strong> accord avec le COD antéposé. Si le pronom réfléchi est COD → accord. S'il est COI (verbe suivi d'un autre COD) → pas d'accord. <em>Elles se sont <b>lavées</b></em> (se = COD) vs <em>Elles se sont <b>lavé</b> les mains</em> (se = COI, les mains = COD postposé).</div>
+</div>
+</div>
+<div id="st_S61" class="sec-pane">
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-green">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Racine — <em>Phèdre</em> (1677)</b><small>Participes · subjonctif d'imprécation · ne explétif</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#4a9e6e"><span class="ann" style="background:#e8f8ee" title="subjonctif en proposition indépendante — souhait/imprécation">Puisse</span> la mort à mes yeux dérober cet affront ! Il faut que je <span class="ann" style="background:#e8f8ee" title="subjonctif présent après il faut que">meure</span>, et je crains plus que la mort ne <span class="ann" style="background:#fef3dc" title="ne explétif après comparatif d'inégalité">fasse</span> son œuvre.</div>
+    <div class="lit-note"><em>Puisse la mort…</em> : subjonctif en proposition indépendante. <em>Je crains plus que… ne</em> : ne explétif après comparatif d'inégalité — la construction la plus subtile du français classique.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">7.1</span>
+  <p class="qtxt">Accord avec COD antéposé :</p>
+  <p class="qsent">Les décisions que le conseil a <input class="blank" id="B71" placeholder="(prendre)" style="width:80px"> hier entreront en vigueur lundi.</p>
+  <div class="hint" id="HB71">COD <em>que</em> = <em>décisions</em> (fém. pl.), antéposé → accord obligatoire.</div>
+  <div class="fb" id="FB71"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB71','B71',['prises'],'Bravo ! COD antéposé fém. pl. → accord.','Attendu : <b>prises</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB71')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">7.2</span>
+  <p class="qtxt">Pronominal — accord avec <em>se</em> COI :</p>
+  <p class="qsent">Elles se sont <input class="blank" id="B73" placeholder="(laver) les mains" style="width:70px"> les mains avant de passer à table.</p>
+  <div class="hint" id="HB73"><em>Se</em> = COI (elles lavent les mains à elles-mêmes). COD = <em>les mains</em>, postposé → pas d'accord.</div>
+  <div class="fb" id="FB73"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB73','B73',['lavé'],'Correct ! Se = COI, les mains = COD postposé → invariable.','Attendu : <b>lavé</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB73')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">7.3</span>
+  <p class="qtxt">Quelle phrase est correcte ?</p>
+  <div class="opts" id="Q72">
+    <button class="opt" onclick="mcq('Q72',this,false)">a) Des pommes ? J'en ai mangées ce matin.</button>
+    <button class="opt" onclick="mcq('Q72',this,true)">b) Cette chanson, je l'ai entendu chanter par trois interprètes.</button>
+    <button class="opt" onclick="mcq('Q72',this,false)">c) Elles se sont lavées les mains avant de manger.</button>
+    <button class="opt" onclick="mcq('Q72',this,false)">d) Les films qu'elle a fait réalisés.</button>
+  </div>
+  <div class="hint" id="HQ72">a) <em>en</em> partitif = pas d'accord. b) la chanson n'est pas sujet logique de <em>chanter</em> = pas d'accord. c) COD postposé. d) <em>faire + inf.</em> invariable.</div>
+  <div class="fb" id="FQ72"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ72')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">7.4</span>
+  <p class="qtxt"><em>En</em> partitif — accord ou non ?</p>
+  <p class="qsent">Des erreurs ? Il en a <input class="blank" id="B74" placeholder="(commettre)" style="width:90px"> bien plus que vous ne le pensez.</p>
+  <div class="hint" id="HB74">Le pronom <em>en</em> partitif ne déclenche jamais l'accord du participe passé avec <em>avoir</em>.</div>
+  <div class="fb" id="FB74"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB74','B74',['commis'],'Correct ! <em>En</em> partitif = jamais d'accord.','Attendu : <b>commis</b> (invariable).')">Vérifier</button>
+    <button class="bh" onclick="hint('HB74')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">7.5</span>
+  <p class="qtxt">Participe + infinitif — accord si sujet logique :</p>
+  <p class="qsent">Les actrices que j'ai <input class="blank" id="B75" placeholder="(entendre) chanter" style="width:110px"> chanter m'ont toutes impressionné.</p>
+  <div class="hint" id="HB75">Les actrices chantent = sujets logiques de <em>chanter</em> → accord obligatoire.</div>
+  <div class="fb" id="FB75"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB75','B75',['entendues'],'Parfait ! Sujets logiques de l'infinitif → accord.','Attendu : <b>entendues</b> (fém. pl.).')">Vérifier</button>
+    <button class="bh" onclick="hint('HB75')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">7.6</span>
+  <p class="qtxt"><em>Faire</em> + infinitif — toujours invariable ?</p>
+  <p class="qsent">Les résultats qu'il a <b>fait</b> publier. / La décision qu'il a <b>fait</b> prendre.</p>
+  <div class="opts" id="Q76">
+    <button class="opt" onclick="mcq('Q76',this,true)">Oui — toujours invariable, sans exception</button>
+    <button class="opt" onclick="mcq('Q76',this,false)">Non — accord selon le genre du COD</button>
+  </div>
+  <div class="hint" id="HQ76"><em>Faire + infinitif</em> forme un bloc indissociable. Le participe de <em>faire</em> est TOUJOURS invariable.</div>
+  <div class="fb" id="FQ76"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ76')">💡 Indice</button></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 8 — RECITS & STYLES
+══════════════════════════════════════════════ -->
+<div class="sec" id="S7">
+<div class="sec-head"><span class="ico">📖</span><div><h2>Récits & styles narratifs</h2><p>Alternance des temps · discours indirect libre · effets stylistiques</p></div></div>
+
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S7',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S7',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S70" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Styles narratifs</h2>
+<div class="rule"><strong>Discours indirect libre (DIL) :</strong> les pensées du personnage sont intégrées au récit sans guillemets ni verbe introducteur. Caractéristiques : imparfait et conditionnel pour les pensées, passé simple pour les actions. Flaubert, Zola, Maupassant, Proust.</div>
+<div class="rule"><strong>Présent de narration :</strong> dans un récit historique ou biographique, le présent rend les événements vivants et immédiats. <em>En 1789, le peuple se lève et prend la Bastille.</em></div>
+<div class="rule"><strong>Imparfait de rupture :</strong> avec <em>et soudain, brusquement, tout à coup</em>, l'imparfait crée un effet de ralenti cinématographique. <em>Et soudain il <b>tombait</b> sur le pavé.</em> (Maupassant)</div>
+<div class="rule"><strong>Infinitif de narration :</strong> <em>Et lui de <b>rire</b> !</em> — réaction vive, archaïsant.</div>
+<div class="rule"><strong>Inversion sans si (C2) :</strong> <em>Eût-elle accepté, tout aurait été différent</em> = <em>Si elle avait accepté…</em> — subjonctif plus-que-parfait avec inversion, remplace la conditionnelle classique.</div>
+</div>
+</div>
+<div id="st_S71" class="sec-pane">
+
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-blue">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Maupassant — <em>Boule de Suif</em> (1880)</b><small>Imparfait de rupture · alternance des temps</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#3a86cc">Les hommes <span class="ann" style="background:#daeeff" title="imparfait — arrière-plan">avaient</span> des barbes sales et <span class="ann" style="background:#daeeff" title="imparfait — état descriptif">allaient</span> d'une allure molle. Tous <span class="ann" style="background:#daeeff" title="imparfait — état psychologique">semblaient</span> accablés. Et soudain l'un d'eux <span class="ann" style="background:#e8e0ff" title="imparfait de RUPTURE — soudaineté, ralenti">tombait</span> sur le pavé.</div>
+    <div class="lit-note">🔵 Imparfait d'arrière-plan : décor de la déroute. 🟣 Imparfait de rupture : avec <em>et soudain</em>, effet de ralenti cinématographique.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">8.1</span>
+  <p class="qtxt">Identifiez le procédé narratif :</p>
+  <p class="qsent">Il prit la lettre et la lut deux fois. Ainsi, elle <em>partait</em>. Elle <em>avait</em> tout décidé sans lui en parler. <em>Pourquoi ne lui aurait-elle rien dit ?</em></p>
+  <div class="opts" id="Q81">
+    <button class="opt" onclick="mcq('Q81',this,false)">Discours direct</button>
+    <button class="opt" onclick="mcq('Q81',this,false)">Discours indirect classique</button>
+    <button class="opt" onclick="mcq('Q81',this,true)">Discours indirect libre</button>
+    <button class="opt" onclick="mcq('Q81',this,false)">Monologue au présent</button>
+  </div>
+  <div class="hint" id="HQ81">Pensées intégrées sans guillemets ni verbe introducteur. Imparfait et conditionnel caractérisent ces passages. Technique de Flaubert.</div>
+  <div class="fb" id="FQ81"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ81')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">8.2</span>
+  <p class="qtxt">Identifiez la valeur de l'imparfait en italique :</p>
+  <p class="qsent">Les invités <em>bavardaient</em> tranquillement — et soudain, l'orage <em>éclatait</em>.</p>
+  <div class="opts" id="Q85">
+    <button class="opt" onclick="mcq('Q85',this,false)">Les deux imparfaits ont la même valeur d'arrière-plan</button>
+    <button class="opt" onclick="mcq('Q85',this,true)">Le premier est un arrière-plan ; le second est un imparfait de rupture</button>
+    <button class="opt" onclick="mcq('Q85',this,false)">Imparfait d'habitude dans les deux cas</button>
+  </div>
+  <div class="hint" id="HQ85">Avec <em>et soudain</em>, l'imparfait change de valeur : imparfait de rupture = soudaineté et ralenti cinématographique.</div>
+  <div class="fb" id="FQ85"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ85')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">8.3</span>
+  <p class="qtxt">Présent de narration — transposez au présent :</p>
+  <p class="qsent norm">Original : <em>En 1848, Victor Hugo prit la parole et défendit les plus pauvres.</em><br>
+  En 1848, Victor Hugo <input class="blank" id="B83a" placeholder="(prendre)" style="width:80px"> la parole et <input class="blank" id="B83b" placeholder="(défendre)" style="width:90px"> les plus pauvres.</p>
+  <div class="hint" id="HB83">Présent de narration : présent dans un récit passé pour créer une immédiateté dramatique.</div>
+  <div class="fb" id="FB83"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FB83',[['B83a',['prend']],['B83b',['défend']]],'Parfait ! Présent de narration.','Attendu : <b>prend / défend</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB83')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag write">Écriture</span><span class="qnum">8.4</span>
+  <p class="qtxt">Inversion littéraire sans <em>si</em> :</p>
+  <p class="qsent norm">Original : <em>Si elle avait accepté, tout aurait été différent.</em></p>
+  <textarea class="ta" id="T82" placeholder="Eût-elle..."></textarea>
+  <div class="hint" id="HT82">Subjonctif plus-que-parfait avec inversion : <em>Eût-elle accepté…</em></div>
+  <div class="fb" id="FT82"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="textarea1('FT82','T82',['eût-elle accepté','eut-elle accepté'],'Parfait ! Inversion sans si — marque du grand style.','Attendu : <b>Eût-elle accepté, tout aurait été différent.</b>')">Vérifier</button>
+    <button class="bh" onclick="hint('HT82')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag write">Écriture</span><span class="qnum">8.5</span>
+  <p class="qtxt">Conditionnel journalistique — information non vérifiée :</p>
+  <p class="qsent norm">Original : <em>Selon des sources, des négociations ont lieu en ce moment.</em></p>
+  <textarea class="ta" id="T84" placeholder="Des négociations..."></textarea>
+  <div class="hint" id="HT84">Conditionnel présent = information en cours non vérifiée. <em>Des négociations <b>seraient</b> en cours…</em></div>
+  <div class="fb" id="FT84"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="textarea1('FT84','T84',['seraient','auraient lieu'],'Bravo ! Conditionnel journalistique.','Exemple : <b>Des négociations seraient en cours</b>, selon des sources.')">Vérifier</button>
+    <button class="bh" onclick="hint('HT84')">💡 Indice</button>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 9 — PIEGES C2
+══════════════════════════════════════════════ -->
+<div class="sec" <div class="sec" id="S8">
+<div class="sec-head"><span class="ico">⚠️</span><div><h2>Pièges &amp; nuances C2</h2><p>Erreurs subtiles · verbes à double régime · faux amis grammaticaux</p></div></div>
+
+<div class="sec-tabs">
+  <button class="sec-tab on" onclick="secTab('st_S8',0,this)">📖 Théorie &amp; conjugaisons</button>
+  <button class="sec-tab" onclick="secTab('st_S8',1,this)">✏️ Textes &amp; exercices</button>
+</div>
+<div id="st_S80" class="sec-pane on">
+<div class="theory">
+<h2>📖 Théorie — Pièges de niveau C2</h2>
+<div class="warn"><strong>Croire que :</strong> affirmatif → indicatif ; négatif → subjonctif ; interrogatif → les deux selon l'intention. <em>Je crois qu'il a raison</em> vs <em>Je ne crois pas qu'il <b>ait</b> raison.</em></div>
+<div class="warn"><strong>Depuis + présent</strong> si l'action continue jusqu'au présent. <strong>Depuis + imparfait</strong> si la durée est interrompue dans le passé. <em>Il travaillait ici depuis vingt ans quand la société ferma ses portes.</em></div>
+<div class="warn"><strong>Venir de + infinitif :</strong> passé récent. Présent → action tout juste accomplie. Imparfait → action accomplie juste avant un moment du passé. <em>Elle venait de raccrocher quand le téléphone sonna.</em></div>
+<div class="warn"><strong>Futur simple vs aller + inf. :</strong> futur périphrastique = imminence, intention forte. Futur simple = prédiction neutre ou distante.</div>
+<div class="warn"><strong>Après que → indicatif</strong> (normatif) : action réelle et accomplie. L'usage contemporain emploie souvent le subjonctif par analogie avec <em>avant que</em>, mais c'est fautif en registre surveillé.</div>
+<div class="rule"><strong>Subjonctif en proposition indépendante :</strong> souhait (<em>Puisse-t-il réussir !</em>), injonction (<em>Qu'il entre !</em>), supposition mathématique (<em>Soit un triangle…</em>), concession (<em>Soit dit en passant</em>).</div>
+<div class="rule"><strong>Il semble que</strong> → subjonctif (incertitude objective). <strong>Il me semble que</strong> → indicatif (opinion personnelle engagée).</div>
+<div class="rule"><strong>Venir de</strong> + infinitif est incompatible avec <em>depuis</em>. On ne peut pas dire *<em>Elle vient de partir depuis une heure.</em></div>
+</div>
+</div>
+
+<div id="st_S81" class="sec-pane">
+<div class="exhead">📝 Texte littéraire illustratif</div>
+<div class="lit c-purple">
+  <div class="lit-head"><span style="font-size:1.2rem">📚</span><div><b>Stendhal — <em>Le Rouge et le Noir</em> (1830)</b><small>DIL · hypothèse dans le récit · style beyliste</small></div></div>
+  <div class="lit-body">
+    <div class="lit-quote" style="border-color:#7c6fcd">Julien <span class="ann" style="background:#c8f5e8" title="passé simple — action">ouvrit</span> les yeux et <span class="ann" style="background:#c8f5e8" title="passé simple">se sentit</span> heureux. Il <span class="ann" style="background:#e8e0ff" title="imparfait — état intérieur, DIL">était</span> en grand danger : si on le <span class="ann" style="background:#fde4dc" title="imparfait hypothétique — protase en si">découvrait</span>, il <span class="ann" style="background:#fde4dc" title="conditionnel présent — apodose">perdrait</span> sa place. Mais quelle importance cela <span class="ann" style="background:#e8e0ff" title="imparfait — pensée de Julien, DIL">avait-il</span> ?</div>
+    <div class="lit-note">Style beyliste — sec, direct. Le DIL intègre les pensées de Julien sans guillemets. La conditionnelle (<em>si on le découvrait, il perdrait</em>) illustre l'irréel du présent au sein du récit passé.</div>
+  </div>
+</div>
+
+<div class="exhead">✏️ Exercices</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">9.1</span>
+  <p class="qtxt">Polarité de <em>croire</em> — choisissez :</p>
+  <p class="qsent">Je ne crois pas qu'il ______ raison sur ce point.</p>
+  <div class="opts" id="Q91">
+    <button class="opt" onclick="mcq('Q91',this,false)">a (indicatif)</button>
+    <button class="opt" onclick="mcq('Q91',this,true)">ait (subjonctif)</button>
+    <button class="opt" onclick="mcq('Q91',this,false)">aurait (conditionnel)</button>
+  </div>
+  <div class="hint" id="HQ91"><em>Ne pas croire que</em> → subjonctif. La négation introduit le doute.</div>
+  <div class="fb" id="FQ91"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ91')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">9.2</span>
+  <p class="qtxt"><em>Depuis</em> — présent ou imparfait ?</p>
+  <p class="qsent">Il ______ ici depuis vingt ans quand la société ferma ses portes.</p>
+  <div class="opts" id="Q92">
+    <button class="opt" onclick="mcq('Q92',this,false)">travaille</button>
+    <button class="opt" onclick="mcq('Q92',this,true)">travaillait</button>
+    <button class="opt" onclick="mcq('Q92',this,false)">a travaillé</button>
+  </div>
+  <div class="hint" id="HQ92"><em>Depuis</em> + imparfait : durée interrompue ou révolue dans le passé.</div>
+  <div class="fb" id="FQ92"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ92')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">9.3</span>
+  <p class="qtxt">Complétez avec <em>venir de</em> au bon temps :</p>
+  <p class="qsent">Elle <input class="blank" id="B93" placeholder="(venir de — passé)" style="width:100px"> raccrocher quand le téléphone sonna.</p>
+  <div class="hint" id="HB93"><em>Venir de + infinitif</em> = passé récent. Dans un récit passé → imparfait de <em>venir</em>.</div>
+  <div class="fb" id="FB93"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB93','B93',['venait de'],'Excellent ! Venait de = passé récent dans un récit passé.','Attendu : <b>venait de</b> raccrocher.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB93')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Lacune</span><span class="qnum">9.4</span>
+  <p class="qtxt">Futur périphrastique vs futur simple — imminence :</p>
+  <p class="qsent">Regardez ces nuages — il <input class="blank" id="B95" placeholder="(pleuvoir)" style="width:120px"> dans cinq minutes.</p>
+  <div class="hint" id="HB95">Futur périphrastique (<em>aller + inf.</em>) = imminence forte, signe visible. Futur simple = prédiction neutre.</div>
+  <div class="fb" id="FB95"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fill1('FB95','B95',['va pleuvoir'],'Correct ! <em>Aller + inf.</em> exprime l'imminence perceptible.','Attendu : <b>va pleuvoir</b>.')">Vérifier</button>
+    <button class="bh" onclick="hint('HB95')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">9.5</span>
+  <p class="qtxt">Quelle phrase contient une erreur ?</p>
+  <div class="opts" id="Q96">
+    <button class="opt" onclick="mcq('Q96',this,false)">a) Il travaillait ici depuis vingt ans quand la société ferma.</button>
+    <button class="opt" onclick="mcq('Q96',this,true)">b) Elle vient de partir depuis une heure.</button>
+    <button class="opt" onclick="mcq('Q96',this,false)">c) Dès qu'elle aura fini, elle partira.</button>
+    <button class="opt" onclick="mcq('Q96',this,false)">d) Au cas où il changerait d'avis, prévenez-moi.</button>
+  </div>
+  <div class="hint" id="HQ96"><em>Venir de</em> = passé immédiat. Incompatible avec une durée (<em>depuis une heure</em>).</div>
+  <div class="fb" id="FQ96"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ96')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag mcq">QCM</span><span class="qnum">9.6</span>
+  <p class="qtxt"><em>Après que</em> — indicatif ou subjonctif (norme grammaticale) ?</p>
+  <p class="qsent">Après qu'il ______ parti, la réunion reprit.</p>
+  <div class="opts" id="Q97">
+    <button class="opt" onclick="mcq('Q97',this,true)">fut (passé simple — indicatif)</button>
+    <button class="opt" onclick="mcq('Q97',this,false)">soit (subjonctif)</button>
+    <button class="opt" onclick="mcq('Q97',this,false)">Les deux sont également corrects</button>
+  </div>
+  <div class="hint" id="HQ97"><em>Après que</em> → indicatif (normatif). Le subjonctif après <em>après que</em> est fautif en registre surveillé.</div>
+  <div class="fb" id="FQ97"></div>
+  <div class="btnrow"><button class="bh" onclick="hint('HQ97')">💡 Indice</button></div>
+</div>
+
+<div class="card">
+  <span class="tag write">Écriture</span><span class="qnum">9.7</span>
+  <p class="qtxt">Conditionnel journalistique — réécrivez :</p>
+  <p class="qsent norm">Original : <em>Le ministre a démissionné ce matin.</em></p>
+  <textarea class="ta" id="T94" placeholder="Le ministre..."></textarea>
+  <div class="hint" id="HT94">Conditionnel passé = information passée non vérifiée.</div>
+  <div class="fb" id="FT94"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="textarea1('FT94','T94',['aurait démissionné','démissionnerait'],'Bravo ! Conditionnel journalistique.','Exemple : <b>Le ministre aurait démissionné ce matin</b>, selon nos sources.')">Vérifier</button>
+    <button class="bh" onclick="hint('HT94')">💡 Indice</button>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="sec" id="S9">
+<div class="sec-head"><span class="ico">🖋️</span><div><h2>Textes à trous — littérature</h2><p>Conjuguez les verbes dans le contexte d'extraits littéraires</p></div></div>
+
+<div class="card">
+  <span class="tag fill">Texte 1</span><span class="qnum">10.1 — Flaubert : imparfait / passé simple</span>
+  <p class="qtxt">Complétez en conjuguant les verbes au temps qui convient :</p>
+  <p class="qsent" style="line-height:2.5">
+    Il <input class="blank" id="C1a" placeholder="(faire)"> nuit noire. Marguerite <input class="blank" id="C1b" placeholder="(dormir)"> depuis trois heures quand un bruit la <input class="blank" id="C1c" placeholder="(réveiller)">. Elle <input class="blank" id="C1d" placeholder="(tendre)"> l'oreille. Son cœur <input class="blank" id="C1e" placeholder="(se mettre)"> à battre. Dès qu'elle <input class="blank" id="C1f" placeholder="(pouvoir)"> se lever, elle <input class="blank" id="C1g" placeholder="(saisir)"> le chandelier.
+  </p>
+  <div class="hint" id="HC1">Décor, états → imparfait. Actions ponctuelles → passé simple. <em>Pouvoir</em> au passé simple : <em>put</em>.</div>
+  <div class="fb" id="FC1"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FC1',[['C1a',['faisait']],['C1b',['dormait']],['C1c',['réveilla']],['C1d',['tendit']],['C1e',['se mit']],['C1f',['put']],['C1g',['saisit']]],'Bravo ! Alternance imparfait / passé simple maîtrisée.','Attendu : <b>faisait / dormait</b> (imparfait) — <b>réveilla / tendit / se mit / put / saisit</b> (passé simple).')">Vérifier tout</button>
+    <button class="bh" onclick="hint('HC1')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Texte 2</span><span class="qnum">10.2 — Subjonctif en contexte</span>
+  <p class="qtxt">Complétez en choisissant le bon mode :</p>
+  <p class="qsent" style="line-height:2.5">
+    Bien qu'elle <input class="blank" id="C2a" placeholder="(être)"> épuisée, elle refusa de s'arrêter. Il était essentiel qu'elle <input class="blank" id="C2b" placeholder="(finir)"> avant que ses collègues n'<input class="blank" id="C2c" placeholder="(arriver)">. Elle espérait qu'ils <input class="blank" id="C2d" placeholder="(comprendre)">. C'était la seule décision qui <input class="blank" id="C2e" placeholder="(avoir) du sens"> du sens.
+  </p>
+  <div class="hint" id="HC2"><em>Bien que</em> → subj. / <em>essentiel que</em> → subj. / <em>avant que</em> → subj. / <em>espérer que</em> → indicatif ! / seul + relative → subj.</div>
+  <div class="fb" id="FC2"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FC2',[['C2a',['soit']],['C2b',['finisse']],['C2c',['arrivent']],['C2d',['comprendraient']],['C2e',['ait']]],'Parfait ! Déclencheurs du subjonctif et exceptions maîtrisés.','Attendu : <b>soit / finisse / arrivent</b> (subj.) — <b>comprendraient</b> (espérer que → conditionnel en discours indirect) — <b>ait</b> (seul + relative).')">Vérifier tout</button>
+    <button class="bh" onclick="hint('HC2')">💡 Indice</button>
+  </div>
+</div>
+
+<div class="card">
+  <span class="tag fill">Texte 3</span><span class="qnum">10.3 — Discours indirect libre (style Stendhal)</span>
+  <p class="qtxt">Complétez en distinguant récit et pensées du personnage :</p>
+  <p class="qsent" style="line-height:2.5">
+    Il <input class="blank" id="C3a" placeholder="(prendre)"> la lettre et la <input class="blank" id="C3b" placeholder="(lire)"> deux fois. Ainsi, elle <input class="blank" id="C3c" placeholder="(partir — DIL)">. Elle <input class="blank" id="C3d" placeholder="(décider — antérieur DIL)"> cela sans même lui en parler. Pourquoi ne lui <input class="blank" id="C3e" placeholder="(dire — cond. passé)">-elle rien dit ? Il <input class="blank" id="C3f" placeholder="(froisser)"> l'enveloppe dans sa paume.
+  </p>
+  <div class="hint" id="HC3">Récit → passé simple. Pensées (DIL) → imparfait pour les états, plus-que-parfait pour l'antériorité, conditionnel passé pour les questions rétrospectives.</div>
+  <div class="fb" id="FC3"></div>
+  <div class="btnrow">
+    <button class="bv" onclick="fills('FC3',[['C3a',['prit']],['C3b',['lut']],['C3c',['partait']],['C3d',['avait décidé']],['C3e',['aurait-elle']],['C3f',['froissa']]],'Excellent ! Passé simple du récit et temps du DIL parfaitement distingués.','Attendu : <b>prit / lut / froissa</b> (passé simple) — <b>partait</b> (imparfait DIL) — <b>avait décidé</b> (plus-que-parfait DIL) — <b>aurait-elle</b> (conditionnel passé DIL).')">Vérifier tout</button>
+    <button class="bh" onclick="hint('HC3')">💡 Indice</button>
+  </div>
+</div>
+
+</div>
+
+id="S10">
+  <div style="background:#fff;border:2px solid #7c6fcd;border-radius:12px;padding:2rem;margin-bottom:1.2rem;text-align:center">
+    <p style="font-size:.82rem;color:#aaa;margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.05em">Score total</p>
+    <div class="score-big" id="SC">—</div>
+    <div class="score-msg" id="SM">Complétez des exercices pour voir votre score.</div>
+    <div style="font-size:1.7rem;margin:.5rem 0;letter-spacing:4px" id="SS"></div>
+  </div>
+  <div style="text-align:center"><button class="br" onclick="resetAll()">↺ Tout recommencer</button></div>
+</div>
+
+<script>
+var done=0, correct=0, seen={};
+
+function go(n){
+  document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('on');});
+  document.querySelectorAll('#NAV button').forEach(function(b){b.classList.remove('on');});
+  document.getElementById('S'+n).classList.add('on');
+  document.querySelectorAll('#NAV button')[n].classList.add('on');
+  if(n===10) updateScore();
+}
+
+
+function secTab(group, n, btn){
+  document.getElementById(group+'0').classList.remove('on');
+  document.getElementById(group+'1').classList.remove('on');
+  btn.parentElement.querySelectorAll('.sec-tab').forEach(function(b){b.classList.remove('on');});
+  document.getElementById(group+n).classList.add('on');
+  btn.classList.add('on');
+}
+
+function stab(group, n, btn){
+  var panes=document.querySelectorAll('[id^="'+group+'"]');
+  panes.forEach(function(p){p.classList.remove('on');});
+  btn.parentElement.querySelectorAll('.stab').forEach(function(b){b.classList.remove('on');});
+  document.getElementById(group+n).classList.add('on');
+  btn.classList.add('on');
+}
+
+function norm(s){
+  return (s||'').trim().toLowerCase()
+    .replace(/[àâä]/g,'a').replace(/[éèêë]/g,'e').replace(/[îï]/g,'i')
+    .replace(/[ôö]/g,'o').replace(/[ùûü]/g,'u').replace(/ç/g,'c')
+    .replace(/\s+/g,' ');
+}
+
+function record(id,ok){
+  if(!seen[id]){done++;if(ok)correct++;seen[id]=ok;}
+  document.getElementById('PB').style.width=Math.round(done/40*100)+'%';
+  document.getElementById('PI').textContent=done+' exercice'+(done>1?'s':'')+' complété'+(done>1?'s':'')+' · '+correct+' correct'+(correct>1?'s':'');
+}
+
+function showFB(id,ok,msg){
+  var fb=document.getElementById(id);
+  if(!fb)return;
+  fb.className='fb '+(ok?'ok':'no');
+  fb.innerHTML=(ok?'✓ ':'✗ ')+msg;
+}
+
+var MSGS={
+  Q1:  ['Correct ! Valeur modale : le futur simple exprime ici une déduction logique sur le présent.','La bonne réponse est <b>Supposition sur le présent</b>. Le futur modal déduit un fait actuel.'],
+  Q3:  ['Correct ! L\'imparfait de politesse atténue la demande par une distance temporelle.','La bonne réponse est <b>Imparfait de politesse</b>.'],
+  Q21: ['Correct ! <em>Espérer que</em> → indicatif — exception parmi les verbes de souhait.','La bonne réponse est <b>viendra</b>. *<em>vienne</em> après <em>espérer que</em> est une faute.'],
+  Q23: ['Correct ! <em>Il semble que</em> (objectif) → subjonctif. <em>Il me semble que</em> → indicatif.','La bonne réponse est <b>soit</b>. Incertitude objective → subjonctif.'],
+  Q25: ['Correct ! Le <em>ne</em> explétif est stylistique — registre soutenu, aucune négation.','La bonne réponse est <b>Explétif</b>. Après <em>avant que</em>, ce <em>ne</em> ne nie rien.'],
+  Q31: ['Correct ! Le conditionnel ne peut jamais figurer dans la proposition en <em>si</em> hypothétique.','La bonne réponse est c). Le conditionnel appartient à la principale, jamais à la subordonnée en <em>si</em>.'],
+  Q33: ['Correct ! Conditionnel journalistique : information rapportée mais non vérifiée.','La bonne réponse est <b>Information non vérifiée</b>. Ce conditionnel est très courant en presse.'],
+  Q41: ['Correct ! Le -s réapparaît devant <em>en</em> et <em>y</em> pour faciliter la liaison.','La bonne réponse est <b>Parles-en à ta mère</b>. -s + trait d\'union obligatoire.'],
+  Q51: ['Correct ! En c), <em>elle</em> relit et réalise — coréférence respectée.','La bonne réponse est c). Le sujet du gérondif doit être identique au sujet du verbe principal.'],
+  Q53: ['Correct ! <em>Après</em> exige toujours l\'infinitif passé.','La bonne réponse est <b>Après avoir mangé</b>. *<em>Après manger</em> est incorrect.'],
+  Q62: ['Correct ! <em>Au cas où</em> → conditionnel.','La bonne réponse est <b>changerait</b>. <em>Au cas où</em> → conditionnel ≠ <em>à condition que</em> → subjonctif.'],
+  Q72: ['Correct ! b) : la chanson n\'est pas sujet logique de <em>chanter</em> → pas d\'accord.','La bonne réponse est b). a) <em>en</em> partitif, c) COD postposé, d) <em>faire + inf.</em> invariable.'],
+  Q81: ['Correct ! DIL : pensées sans guillemets, imparfait et conditionnel. Technique de Flaubert.','La bonne réponse est <b>Discours indirect libre</b>.'],
+  Q91: ['Correct ! <em>Ne pas croire que</em> → subjonctif.','La bonne réponse est <b>ait</b>. La négation de <em>croire</em> introduit le doute → subjonctif.'],
+  Q92: ['Correct ! <em>Depuis</em> + imparfait : durée interrompue dans le passé.','La bonne réponse est <b>travaillait</b>. La fermeture interrompt la durée → imparfait.'],
+  Q32: ['Correct ! Forme mixte : condition passée → plus-que-parfait, conséquence présente → conditionnel présent.','<b>Attendu :</b> avais dormi (PQP) / serais (conditionnel présent).'],
+  Q16: ['Correct ! Le présent de narration crée une immédiateté dramatique.','La bonne réponse est <b>Présent de narration</b>.'],
+  Q19: ['Correct ! Imparfait de rupture avec <em>et soudain</em> = ralenti cinématographique.','La bonne réponse est <b>Imparfait de rupture</b>.'],
+  Q27: ['Correct ! Subjonctif en proposition indépendante — souhait.','La bonne réponse est <b>Souhait en proposition indépendante</b>.'],
+  Q28: ['Correct ! À l\'interrogatif, <em>croire que</em> accepte les deux.','La bonne réponse est <b>les deux corrects</b> selon l\'intention.'],
+  Q43: ['Correct ! Impératif négatif : pronoms en position proclitique.','La bonne réponse est <b>Ne le lui dis pas !</b>'],
+  Q55: ['Correct ! Avec complément → participe présent invariable.','La bonne réponse est b). Avec complément → participe présent invariable.'],
+  Q76: ['Correct ! <em>Faire + infinitif</em> = toujours invariable.','La bonne réponse est <b>toujours invariable</b>.'],
+  Q85: ['Correct ! <em>Éclatait</em> avec <em>et soudain</em> = imparfait de rupture.','La bonne réponse est b). Imparfait de rupture.'],
+  Q96: ['Correct ! <em>Venir de</em> et <em>depuis</em> sont incompatibles.','La phrase b) est incorrecte.'],
+  Q97: ['Correct ! <em>Après que</em> → indicatif en grammaire normative.','La bonne réponse est <b>fut</b> (indicatif).']
+};
+
+function mcq(gid, btn, ok){
+  var g=document.getElementById(gid);
+  if(g.dataset.done) return;
+  g.dataset.done='1';
+  g.querySelectorAll('.opt').forEach(function(b){b.disabled=true;});
+  btn.classList.add(ok?'ok':'no');
+  if(!ok){
+    g.querySelectorAll('.opt').forEach(function(b){
+      if(b!==btn && !b.classList.contains('no')) b.classList.add('show');
+    });
+  }
+  var m=MSGS[gid]||['Correct !','Incorrect.'];
+  showFB('F'+gid, ok, m[ok?0:1]);
+  record(gid, ok);
+}
+
+function fill1(fbid, iid, answers, msgOk, msgNo){
+  var inp=document.getElementById(iid);
+  var val=norm(inp.value);
+  var ok=answers.some(function(a){return norm(a)===val;});
+  inp.classList.remove('ok','no'); inp.classList.add(ok?'ok':'no');
+  showFB(fbid, ok, ok?msgOk:msgNo);
+  record(fbid, ok);
+}
+
+function fills(fbid, pairs, msgOk, msgNo){
+  var allOk=true;
+  pairs.forEach(function(p){
+    var inp=document.getElementById(p[0]);
+    if(!inp) return;
+    var val=norm(inp.value);
+    var ok=p[1].some(function(a){return norm(a)===val||val.indexOf(norm(a))>=0;});
+    inp.classList.remove('ok','no'); inp.classList.add(ok?'ok':'no');
+    if(!ok) allOk=false;
+  });
+  showFB(fbid, allOk, allOk?msgOk:msgNo);
+  record(fbid, allOk);
+}
+
+function textarea1(fbid, taid, kws, msgOk, msgNo){
+  var ta=document.getElementById(taid);
+  var val=norm(ta.value);
+  var ok=kws.some(function(k){return val.indexOf(norm(k))>=0;});
+  showFB(fbid, ok, ok?msgOk:msgNo);
+  record(fbid, ok);
+}
+
+function hint(id){document.getElementById(id).classList.toggle('on');}
+
+function updateScore(){
+  document.getElementById('SC').textContent=correct+' / '+done;
+  var p=done>0?correct/done:0;
+  var msg,stars;
+  if(done===0){msg='Complétez des exercices pour voir votre score.';stars='';}
+  else if(p>=.9){msg='Maîtrise excellente — niveau C2 confirmé !';stars='★★★★★';}
+  else if(p>=.75){msg='Très bon niveau — quelques points à consolider.';stars='★★★★☆';}
+  else if(p>=.6){msg='Bon début — continuez à pratiquer !';stars='★★★☆☆';}
+  else{msg='Relisez la théorie et réessayez — vous progressez !';stars='★★☆☆☆';}
+  document.getElementById('SM').textContent=msg;
+  document.getElementById('SS').textContent=stars;
+}
+
+function resetAll(){
+  done=0;correct=0;seen={};
+  document.querySelectorAll('.opt').forEach(function(b){b.classList.remove('ok','no','show');b.disabled=false;});
+  document.querySelectorAll('.opts').forEach(function(g){delete g.dataset.done;});
+  document.querySelectorAll('.blank').forEach(function(i){i.value='';i.classList.remove('ok','no');});
+  document.querySelectorAll('.ta').forEach(function(t){t.value='';});
+  document.querySelectorAll('.fb').forEach(function(f){f.className='fb';f.innerHTML='';});
+  document.querySelectorAll('.hint').forEach(function(h){h.classList.remove('on');});
+  document.getElementById('PB').style.width='0';
+  document.getElementById('PI').textContent='0 exercices complétés';
+  updateScore();
+}
+</script>
+</body>
+</html>
